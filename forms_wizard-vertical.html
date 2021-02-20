@@ -1,0 +1,1267 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from scutum-html.tzdthemes.com/forms_wizard-vertical.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Feb 2021 07:23:46 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Scutum Admin Template</title>
+    <meta name="description" content="Scutum Admin Template" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav/favicon-16x16.png">
+	<link rel="mask-icon" href="assets/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#00838f">
+
+
+	<!-- polyfills -->
+	<script src="assets/js/vendor/polyfills.min.js"></script>
+
+	<!-- UIKit js -->
+    <script src="assets/js/uikit.min.js"></script>
+</head>
+<body>
+<script>
+	// prevent FOUC
+	var html = document.getElementsByTagName('html')[0];
+	html.style.backgroundColor = '#f5f5f5';
+	document.body.style.visibility = 'hidden';
+	document.body.style.overflow = 'hidden';
+	document.body.style.apacity = '0';
+	document.body.style.maxHeight = "100%";
+</script>
+<header id="sc-header">
+	<nav class="uk-navbar uk-navbar-container" data-uk-navbar="mode: click; duration: 360">
+		<div class="uk-navbar-left nav-overlay-small uk-margin-right uk-navbar-aside">
+            			<a href="#" id="sc-sidebar-main-toggle"><i class="mdi mdi-backburger sc-menu-close"></i><i class="mdi mdi-menu sc-menu-open"></i></a>
+            			<div class="sc-brand uk-visible@s">
+				<a href="dashboard-v1.html"><img src="assets/img/logo.png" alt=""></a>
+			</div>
+		</div>
+    		<div class="uk-navbar-left nav-overlay uk-margin-right uk-visible@m">
+			<ul class="uk-navbar-nav">
+				<li>
+					<a href="javascript:void(0)" class="md-color-white sc-padding-remove-left"><i class="mdi mdi-view-grid"></i></a>
+					<div class="uk-navbar-dropdown sc-padding-medium">
+						<div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid uk-grid-small" data-uk-grid>
+							<div>
+								<a href="pages-mailbox.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-email-outline sc-icon-32 sc-text-lh-1 md-color-green-700"></i>
+									<span class="uk-text-medium sc-color-primary">Mailbox</span>
+								</a>
+							</div>
+							<div>
+								<a href="pages-poi_listing.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-map-marker sc-icon-32 sc-text-lh-1 md-color-red-700"></i>
+									<span class="uk-text-medium sc-color-primary">POI</span>
+								</a>
+							</div>
+							<div>
+								<a href="pages-chat.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-message-outline sc-icon-32 sc-text-lh-1 md-color-purple-700"></i>
+									<span class="uk-text-medium sc-color-primary">Chat</span>
+								</a>
+							</div>
+							<div>
+								<a href="plugins-calendar.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-calendar sc-icon-32 sc-text-lh-1 md-color-light-blue-700"></i>
+									<span class="uk-text-medium sc-color-primary">Calendar</span>
+								</a>
+							</div>
+							<div>
+								<a href="pages-user_profile.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-account sc-icon-32 sc-text-lh-1 md-color-blue-grey-700"></i>
+									<span class="uk-text-medium sc-color-primary">Profile</span>
+								</a>
+							</div>
+							<div>
+								<a href="plugins-charts.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-chart-multiline sc-icon-32 sc-text-lh-1 md-color-amber-700"></i>
+									<span class="uk-text-medium sc-color-primary">Charts</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+    		<div class="nav-overlay nav-overlay-small uk-navbar-right uk-flex-1" hidden>
+			<a class="uk-navbar-toggle uk-visible@m" data-uk-toggle="target: .nav-overlay; animation: uk-animation-slide-top" href="#">
+				<i class="mdi mdi-close sc-icon-24"></i>
+			</a>
+			<a class="uk-navbar-toggle uk-hidden@m uk-padding-remove-left" data-uk-toggle="target: .nav-overlay-small; animation: uk-animation-slide-top" href="#">
+				<i class="mdi mdi-close sc-icon-24"></i>
+			</a>
+			<div class="uk-navbar-item uk-width-expand uk-padding-remove-right">
+				<form class="uk-search uk-search-navbar uk-width-1-1 uk-flex">
+                    <div class="uk-flex-1 uk-position-relative">
+                        <a class="uk-form-icon uk-form-icon-flip" href="javascript:void(0)" data-uk-icon="icon: close" data-sc-clear-input></a>
+                        <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                    </div>
+					<button class="sc-button sc-button-default sc-button-small sc-button-icon sc-button-flat uk-margin-small-left" type="button"><i class="mdi mdi-magnify sc-icon-24 md-color-white"></i></button>
+				</form>
+			</div>
+		</div>
+		<div class="nav-overlay nav-overlay-small uk-navbar-right">
+			<ul class="uk-navbar-nav">
+				<li>
+					<a class="uk-navbar-toggle uk-visible@m" href="#" data-uk-toggle="target: .nav-overlay; animation: uk-animation-slide-top"><i class="mdi mdi-magnify"></i></a>
+                    <a class="uk-navbar-toggle uk-hidden@m" href="#" id="sc-search-main-toggle-mobile" data-uk-toggle="target: .nav-overlay-small; animation: uk-animation-slide-top"><i class="mdi mdi-magnify"></i></a>
+				</li>
+				<li class="uk-visible@l">
+					<a href="#" id="sc-js-fullscreen-toggle"><i class="mdi mdi-fullscreen sc-js-el-hide"></i><i class="mdi mdi-fullscreen-exit sc-js-el-show"></i></a>
+				</li>
+				<li class="uk-visible@s">
+					<a href="#" class="sc-text-semibold">
+						EN
+					</a>
+					<div class="uk-navbar-dropdown uk-dropdown-small">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a href="#">Deutsch</a></li>
+							<li><a href="#">Español</a></li>
+							<li><a href="#">Français</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="mdi mdi-email"></span>
+					</a>
+					<div class="uk-navbar-dropdown sc-padding-remove">
+						<div class="uk-panel uk-panel-scrollable uk-height-medium">
+							<ul class="uk-list uk-list-divider sc-js-edge-fix">
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<span class="sc-avatar-initials md-color-white md-bg-red-500" title="roob.brenden">MO</span>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">05:13 PM</span>
+										<span class="uk-display-block uk-text-truncate">Repellendus omnis excepturi qui at consequuntur sint nam magnam.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<img src="assets/img/avatars/avatar_05_sm.png" class="sc-avatar " alt="chadrick.howe"/>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<div class="uk-text-small uk-text-muted uk-width-expand">Feb 8, 2021</div>
+										<span class="uk-display-block uk-text-truncate">Libero itaque sapiente aut dolore atque nostrum sint.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<span class="sc-avatar-initials md-color-white md-bg-light-green-500" title="louie.kuvalis">KS</span>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">03:13 PM</span>
+										<span class="uk-display-block uk-text-truncate">Ut officiis occaecati alias rerum iste autem magni.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<img src="assets/img/avatars/avatar_06_sm.png" class="sc-avatar " alt="hmitchell"/>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">Feb 7, 2021</span>
+										<span class="uk-display-block uk-text-truncate">Impedit beatae nihil voluptatem sequi.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<img src="assets/img/avatars/avatar_02_sm.png" class="sc-avatar " alt="wolff.sierra"/>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">Feb 5, 2021</span>
+										<span class="uk-display-block uk-text-truncate">Et exercitationem saepe error praesentium eius dicta quia ducimus.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<span class="sc-avatar-initials md-color-white md-bg-purple-500" title="gleannon">FA</span>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">Feb 3, 2021</span>
+										<span class="uk-display-block uk-text-truncate">Dolorum et rem labore architecto quis velit temporibus.</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="pages-mailbox.html" class="uk-flex uk-text-small sc-padding-small-ends sc-padding-medium">Show all in mailbox</a>
+					</div>
+				</li>
+				<li class="uk-visible@s">
+					<a href="#">
+						<span class="mdi mdi-bell uk-display-inline-block">
+							<span class="sc-indicator md-bg-color-red-600"></span>
+						</span>
+					</a>
+					<div class="uk-navbar-dropdown md-bg-grey-100">
+                        <div class="sc-padding-medium sc-padding-small-ends">
+                            <div class="uk-text-right uk-margin-medium-bottom">
+                                <button class="sc-button sc-button-default sc-button-outline sc-button-mini sc-js-clear-alerts">Clear all</button>
+                            </div>
+                            <ul class="uk-list uk-margin-remove" id="sc-header-alerts">
+                                <li class="sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-alert-outline md-color-red-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        Information Page Not Found!
+                                    </div>
+                                </li>
+                                <li class="uk-margin-small-top sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-email-check-outline md-color-blue-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        A new password has been sent to your e-mail address.
+                                    </div>
+                                </li>
+                                <li class="uk-margin-small-top sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-alert-outline md-color-red-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        You do not have permission to access the API!
+                                    </div>
+                                </li>
+                                <li class="uk-margin-small-top sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-check-all md-color-light-green-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        Your enquiry has been successfully sent.
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="uk-text-medium uk-text-center sc-js-empty-message sc-text-semibold sc-padding-ends" style="display: none">No alerts!</div>
+                        </div>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="assets/img/avatars/avatar_default_sm.png" alt=""></a>
+					<div class="uk-navbar-dropdown uk-dropdown-small">
+						<ul class="uk-nav uk-nav-navbar">
+							<li><a href="pages-user_profile.html">Profile</a></li>
+							<li><a href="pages-settings.html">Settings</a></li>
+							<li><a href="login_page.html">Log Out</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+            <a href="#" class="sc-js-offcanvas-toggle md-color-white uk-margin-left uk-hidden@l">
+	            <i class="mdi mdi-menu sc-offcanvas-open"></i>
+	            <i class="mdi mdi-arrow-right sc-offcanvas-close"></i>
+            </a>
+		</div>
+	</nav>
+</header>
+
+<aside id="sc-sidebar-main" class="sc-sidebar-info-fixed">
+    <div class="uk-offcanvas-bar">
+	    <div class="sc-sidebar-main-scrollable" data-sc-scrollbar="visible-y">
+	        <ul class="sc-sidebar-menu uk-nav">
+	        
+	            
+	                <li class="sc-sidebar-menu-heading"><span>Applications</span></li>
+	                
+	            	        
+	            	            <li title="Chat">
+	                <a href="pages-chat.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-message-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Chat</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Invoices">
+	                <a href="pages-invoices.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-receipt"></i>
+	                    
+	                    </span><span class="uk-nav-title">Invoices</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Mailbox">
+	                <a href="pages-mailbox.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-email-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Mailbox</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Task Board">
+	                <a href="pages-task_board.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-calendar-text"></i>
+	                    
+	                    </span><span class="uk-nav-title">Task Board</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Notes">
+	                <a href="pages-notes.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-note-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Notes</span>
+	                </a>
+	                	            </li>
+	            	        
+	            
+	                <li class="sc-sidebar-menu-heading"><span>Menu</span></li>
+	                
+	            	        
+	            	            <li title="Dashboards">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-view-dashboard-variant"></i>
+	                    
+	                    </span><span class="uk-nav-title">Dashboards</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="dashboard-v1.html">		                                		                                Dashboard 1	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="dashboard-v2.html">		                                		                                Dashboard 2	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Forms">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-format-line-style"></i>
+	                    
+	                    </span><span class="uk-nav-title">Forms</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-regular_elements.html">		                                		                                Regular Elements	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-advanced_elements.html">		                                		                                Advanced Elements	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-dynamic_fields.html">		                                		                                Dynamic Fields	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-validation.html">		                                		                                Validation	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        	                            	                                <li>
+	                                    <a href="#">Form Examples</a>	                                    <ul>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-advertising_evaluation_form.html">		                                            		                                            Advertising Evaluation Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-booking_form.html">		                                            		                                            Booking Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-car_rental_form.html">		                                            		                                            Car Rental Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-checkout_form.html">		                                            		                                            Checkout Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-contact_forms.html">		                                            		                                            Contact Forms	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-job_application_form.html">		                                            		                                            Job Application Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-medical_history_form.html">		                                            		                                            Medical History Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-registration_form.html">		                                            		                                            Registration Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-rental_application_form.html">		                                            		                                            Rental Application Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-transaction_feedback_form.html">		                                            		                                            Transaction Feedback Form	                                            </a>
+	                                        </li>
+	                                    
+	                                    </ul>
+	                                </li>
+	                            
+	                        
+	                        
+	                    	                        	                            	                                <li>
+	                                    <a href="#">Wizard</a>	                                    <ul>
+	                                    	                                        <li>
+	                                            <a href="forms_wizard-horizontal.html">		                                            		                                            Horizontal	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_wizard-horizontal_minimal.html">		                                            		                                            Horizontal Minimal	                                            </a>
+	                                        </li>
+	                                    	                                        <li class="sc-page-active">
+	                                            <a href="forms_wizard-vertical.html">		                                            		                                            Vertical	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_wizard-vertical_minimal.html">		                                            		                                            Vertical Minimal	                                            </a>
+	                                        </li>
+	                                    
+	                                    </ul>
+	                                </li>
+	                            
+	                        
+	                        
+	                    	                        	                            	                                <li class="sc-sidebar-menu-heading"><span>WYSIWYG Editors</span></li>
+	                                	                                    <li>
+	                                    	                                        <a href="forms_wysiwyg-ckeditor.html">		                                        		                                        CKEditor	                                        </a>
+	                                    	                                    </li>
+	                                	                                    <li>
+	                                    	                                        <a href="forms_wysiwyg-tinymce.html">		                                        		                                        TinyMCE	                                        </a>
+	                                    	                                    </li>
+	                                
+	                            
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Components">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-puzzle"></i>
+	                    
+	                    </span><span class="uk-nav-title">Components</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-accordion.html">		                                		                                Accordion	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-alert.html">		                                		                                Alert	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-animations.html">		                                		                                Animations	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-avatars.html">		                                		                                Avatars	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-badge_label.html">		                                		                                Badge, Label	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-base.html">		                                		                                Base	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-breadcrumb.html">		                                		                                Breadcrumb	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-buttons.html">		                                		                                Buttons	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-fab_buttons.html">		                                		                                FAB Buttons	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-cards.html">		                                		                                Cards	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-color_palette.html">		                                		                                Color Palette	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-drop_dropdowns.html">		                                		                                Drop/Dropdowns	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-filters.html">		                                		                                Filters	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-footer.html">		                                		                                Footer	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-fancy_footer.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Fancy Footer	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-grid.html">		                                		                                Grid	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-icons.html">		                                		                                Icons	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-lists.html">		                                		                                Lists	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-masonry.html">		                                		                                Masonry	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-modals_dialogs.html">		                                		                                Modals/Dialogs	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-notifications.html">		                                		                                Notifications	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-overlay.html">		                                		                                Overlay	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-pagination.html">		                                		                                Pagination	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-progress_spinners.html">		                                		                                Progress/Spinners	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-scrollable.html">		                                		                                Scrollable	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-slider.html">		                                		                                Slider	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-sortable.html">		                                		                                Sortable	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-swiped_list.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Swiped List	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-tables.html">		                                		                                Tables	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-tabs.html">		                                		                                Tabs	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-timeline.html">		                                		                                Timeline	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-toolbar.html">		                                		                                Toolbar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-tooltips.html">		                                		                                Tooltips	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Pages">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-application"></i>
+	                    
+	                    </span><span class="uk-nav-title">Pages</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-blank.html">		                                		                                Blank	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-blank_header_expanded.html">		                                		                                Blank (expanded header)	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-contact_list.html">		                                		                                Contact List	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-contact_list_single.html">		                                		                                Contact List (single)	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-data_visualization.html">		                                		                                Data visualization	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        	                            	                                <li class="sc-sidebar-menu-heading"><span>Error Pages</span></li>
+	                                	                                    <li>
+	                                    	                                        <a href="error_404.html">		                                        		                                        Error 404	                                        </a>
+	                                    	                                    </li>
+	                                	                                    <li>
+	                                    	                                        <a href="error_500.html">		                                        		                                        Error 500	                                        </a>
+	                                    	                                    </li>
+	                                
+	                            
+	                        
+	                        	                            <li class="sc-sidebar-menu-separator"></li>
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-gallery.html">		                                		                                Gallery	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-help_faq.html">		                                		                                Help/Faq	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-invoice_create.html">		                                		                                Invoice (new)	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        	                            	                                <li class="sc-sidebar-menu-heading"><span>Issue Tracker</span></li>
+	                                	                                    <li>
+	                                    	                                        <a href="pages-issues_list.html">		                                        		                                        List View	                                        </a>
+	                                    	                                    </li>
+	                                	                                    <li>
+	                                    	                                        <a href="pages-issue_details.html">		                                        		                                        Issue Details	                                        </a>
+	                                    	                                    </li>
+	                                
+	                            
+	                        
+	                        	                            <li class="sc-sidebar-menu-separator"></li>
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="login_page.html">		                                		                                Login Page	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-poi_listing.html">		                                		                                POI listing	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-pricing_tables.html">		                                		                                Pricing Tables	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-settings.html">		                                		                                Settings	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-user_profile.html">		                                		                                User Profile	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Plugins">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-power-plug"></i>
+	                    
+	                    </span><span class="uk-nav-title">Plugins</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-ajax.html">		                                		                                Ajax	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-calendar.html">		                                		                                Calendar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-calendar_events.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Calendar/Events	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-charts.html">		                                		                                Charts	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-code_editor.html">		                                		                                Code Editor	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-data_grid.html">		                                		                                Data Grid	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-datatables.html">		                                		                                Datatables	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-diff_tool.html">		                                		                                Diff Tool	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-gantt_chart.html">		                                		                                Gantt Chart	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-google_maps.html">		                                		                                Google Maps	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-idle_timeout.html">		                                		                                Idle Timeout	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-image_cropper.html">		                                		                                Image Cropper	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-push_notifications.html">		                                		                                Push Notifications	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-tour.html">		                                		                                Tour	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-tree.html">		                                		                                Tree	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-vector_maps.html">		                                		                                Vector Maps	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Layout">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-view-compact-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Layout</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="layout-top_menu.html">		                                		                                Top Menu	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="layout-mini_sidebar.html">		                                		                                Mini Sidebar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="layout-offcanvas_sidebar.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Offcanvas Sidebar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        	            <li title="Multi-level">
+	                <a href="#">
+	                    <span class="uk-nav-icon"><i class="mdi mdi-format-line-weight"></i></span><span class="uk-nav-title">Multi level</span>
+	                </a>
+	                <ul class="sc-sidebar-menu-sub">
+	                    <li><a href="#">Submenu 1</a></li>
+	                    <li class="sc-js-submenu-trigger sc-has-submenu">
+	                        <a href="#">Submenu 2</a>
+	                        <ul>
+	                            <li><a href="#">Submenu 2.1</a></li>
+	                            <li>
+	                                <a href="#">Submenu 2.2</a>
+	                                <ul>
+	                                    <li><a href="#">Submenu 2.2.1</a></li>
+	                                    <li><a href="#">Submenu 2.2.2</a></li>
+	                                    <li><a href="#">Submenu 2.2.3</a></li>
+	                                </ul>
+	                            </li>
+	                            <li><a href="#">Submenu 2.3</a></li>
+	                            <li><a href="#">Submenu 2.4</a></li>
+	                        </ul>
+	                    </li>
+	                    <li><a href="#">Submenu 3</a></li>
+	                    <li>
+	                        <a href="#">Submenu 4</a>
+	                        <ul>
+	                            <li>
+	                                <a href="#">Submenu 4.1</a>
+	                                <ul>
+	                                    <li><a href="#">Submenu 4.1.1</a></li>
+	                                    <li><a href="#">Submenu 4.1.2</a></li>
+	                                    <li><a href="#">Submenu 4.1.3</a></li>
+	                                </ul>
+	                            </li>
+	                            <li><a href="#">Submenu 4.2</a></li>
+	                            <li><a href="#">Submenu 4.3</a></li>
+	                        </ul>
+	                    </li>
+	                </ul>
+	            </li>
+	        </ul>
+
+	    </div>
+        <div class="sc-sidebar-info">
+            version: 2.5.0
+        </div>
+    </div>
+</aside>
+
+<div id="sc-page-wrapper">
+	<div id="sc-page-content">
+		<div class="uk-flex-center" data-uk-grid>
+			<div class="uk-width-4-5@l">
+				<form action="#">
+					<div id="sc-wizard-v">
+						<h3><i class="step-icon mdi mdi-account-box"></i><span>Billing<span class="sub-text">Magni animi labore sed.</span></span></h3>
+						<section class="border-dark">
+							<h5>Et temporibus totam voluptatem et ad ea hic assumenda.</h5>
+							Sint ut quidem voluptatem in vero vero et et qui dolorum qui optio ipsum porro enim necessitatibus labore commodi et ut est a voluptas delectus delectus dolore ea non quas laboriosam omnis accusamus praesentium sapiente tempore reprehenderit consequatur aliquam possimus ea minus placeat aliquam et voluptatem cupiditate ut et rerum ipsum fugit quaerat nobis at et ea est qui vero porro animi maiores iusto ab sunt deserunt dolores quo non aut aliquid perspiciatis ut et qui ut quisquam nostrum est consequatur modi est est et voluptatum esse quia et et eaque rem illo veritatis voluptas dicta et iure ut ullam necessitatibus voluptatem rerum quasi unde repudiandae mollitia pariatur delectus dolorem ut dolor vitae natus fugit est dicta nihil beatae nam facere doloremque et dolores exercitationem quia placeat at a voluptatum et aperiam et reiciendis cum quia dignissimos odit provident et error voluptatem aliquam corrupti rerum voluptate magni nobis labore eos fuga deserunt et totam rerum est quas est impedit nesciunt ut aut rem voluptate aliquid error veritatis autem qui quo non ut ut id velit rerum ea quis rem possimus illo fugit magni qui vel id et omnis quia sit ex nisi a quia neque sapiente illo mollitia accusantium harum nulla sed enim odit ut ut doloremque mollitia saepe explicabo et occaecati rerum quam consectetur dicta quas animi omnis ipsam nihil velit iure distinctio saepe rerum blanditiis ut placeat officiis excepturi qui quo qui corporis facilis qui minima ipsa neque fuga magni unde debitis repellat maiores soluta nobis vitae debitis eum quaerat est et iusto distinctio id labore sunt ut quia harum sed dolor natus sint accusantium modi reiciendis voluptatem excepturi earum quisquam ab sed impedit iste qui quo voluptatem laudantium et vitae accusamus exercitationem reprehenderit nesciunt id inventore dolorem ut dicta sapiente qui distinctio deleniti voluptatem eaque ut quisquam magni totam aut consequatur ipsa facilis enim non perferendis hic ex nemo molestias et mollitia labore fuga commodi rerum repudiandae esse omnis aut velit quisquam nostrum placeat.						</section>
+						<h3><i class="step-icon mdi mdi-home"></i>Address<span class="sub-text">In assumenda velit quia.</span></h3>
+						<section class="border-dark">
+							<h5>Aperiam minima officiis et voluptate ipsa reiciendis in ut quod eos.</h5>
+							Ut sit reprehenderit magnam dolorem ut quam molestiae quasi et sit cum ut quasi reiciendis ducimus ut repellendus consequuntur aut vel libero blanditiis nesciunt libero quia asperiores laudantium autem unde ut earum optio est animi quo qui qui laudantium veritatis animi et sequi eaque nostrum qui pariatur a fugiat non illum asperiores enim molestiae vero et asperiores optio voluptatum sequi ullam amet nulla nihil beatae distinctio aut repudiandae et aut maxime itaque consequatur molestiae quo numquam sint ut consequatur omnis repellendus dolorum in dolor beatae et quo vero enim repellendus nisi qui assumenda quisquam enim eveniet architecto quis aut rerum quo quia optio debitis minima aperiam amet est placeat eos provident id est dolorem quis cum maiores ipsam qui similique consequatur qui et deserunt omnis ut et perspiciatis asperiores quam laboriosam vel est repudiandae quam delectus nemo voluptates repellat labore molestiae dolore aliquid necessitatibus nihil quia ducimus est ut et placeat quos necessitatibus debitis consequuntur aliquam tempora fugiat iusto et cumque asperiores ut distinctio et pariatur magni assumenda omnis et in voluptatem cumque nam necessitatibus perspiciatis sequi rem fuga neque dolorum autem atque aut et est error rem consectetur neque atque assumenda et est accusamus necessitatibus voluptates nam voluptatibus sit explicabo repudiandae quibusdam expedita quia quas aliquam numquam enim et culpa dolorem ipsum qui porro beatae nam commodi eos nesciunt iste architecto ut dolor vitae ipsum molestiae voluptatum aliquam tempora odit sit id doloribus labore culpa aspernatur dolores cupiditate error voluptas totam sint exercitationem aut sint occaecati dolorem culpa distinctio sequi quaerat ut odit in voluptatem sapiente suscipit non recusandae non et ad et sit voluptas quia quia minima quod perspiciatis nihil quibusdam velit sint reprehenderit totam eligendi at rerum ullam distinctio ut aliquid quaerat iste rem nisi at enim quod ea velit vel optio itaque vero minima non dignissimos voluptatem tempora recusandae unde et velit ducimus et tenetur odio facilis ad dolorem veniam voluptatem pariatur autem excepturi fugit maiores explicabo sit omnis eaque tempora vel vel provident omnis id qui sapiente et quidem minus reiciendis provident reprehenderit ea illum facilis voluptatum ab quia saepe debitis ullam quia asperiores voluptate et architecto eum rerum quia necessitatibus accusantium animi exercitationem ut exercitationem ut modi debitis praesentium quia ipsam itaque corrupti atque at et ducimus praesentium tenetur dicta similique amet adipisci excepturi dolor ipsam nulla ullam ipsam necessitatibus fugit officiis id sunt corporis consequatur est beatae earum molestiae quae mollitia sequi aperiam animi odit doloremque dignissimos beatae et mollitia officiis vitae consectetur laborum ipsa est architecto qui et qui hic id iure rerum illo qui cumque quia repellat ex provident ut eius ullam illo architecto ut veritatis sed odio delectus nostrum ea asperiores nesciunt laborum magnam nostrum atque non praesentium delectus nihil voluptatem sequi quidem velit facere magni delectus ea qui vero sint fuga et libero quam quas quo et ex itaque ut nostrum nihil tenetur numquam nulla in animi repellendus repellat accusantium ipsam.						</section>
+						<h3><i class="step-icon mdi mdi-credit-card"></i>Payment<span class="sub-text">Non ea vitae nam quo.</span></h3>
+						<section class="border-dark">
+							<h5>Aut impedit ex voluptatem aut in officiis.</h5>
+							Enim natus maxime voluptas fugiat qui assumenda exercitationem qui et aliquam fuga ea quo porro aut eligendi dolorum incidunt quam delectus reprehenderit minus et temporibus id est beatae autem ut repellat quaerat cumque qui labore labore qui nihil quasi nulla sint cum saepe in error earum praesentium quos eaque et reiciendis rerum nisi facilis voluptatem quod est rerum sit similique ea molestiae tenetur sequi sit consectetur aut est et dolore eveniet excepturi nam eius enim eum dolores labore laborum placeat dolores et sit numquam laboriosam ipsa qui quas qui id illo corporis alias cupiditate quas sed consequatur aliquam vero eos rerum officia corporis dolor maxime pariatur ad suscipit nam perferendis distinctio sit qui voluptate dolorem autem ut nihil eos optio cum excepturi aut rerum minima tempora minus ullam omnis quam magni nemo vero est sequi dolorem qui voluptas quasi doloribus voluptates ipsum qui reiciendis beatae in quas dolores eveniet non aut maiores accusantium aut et quis maxime ut aliquid.						</section>
+						<h3>Review<span class="sub-text">Deleniti commodi vitae at.</span></h3>
+						<section class="border-dark">
+							<h5>Beatae voluptatibus sapiente praesentium autem non voluptatem.</h5>
+							Aperiam est sit ut aut consectetur rerum quis sunt accusantium id et eos magni tenetur quam numquam accusantium veniam nihil error et aut recusandae labore omnis blanditiis rerum placeat maiores quia magni possimus assumenda expedita cupiditate ullam sed ratione optio enim ut minus dolorem sed libero cumque soluta inventore labore et aliquam exercitationem.						</section>
+						<h3><i class="step-icon mdi mdi-check-outline"></i>Finish<span class="sub-text">At incidunt quia pariatur.</span></h3>
+						<section class="border-dark">
+							<h5>Cupiditate qui molestias excepturi molestiae repellat molestiae molestias quasi numquam recusandae nihil.</h5>
+							Laboriosam est rerum eos et maxime voluptatibus sed perspiciatis veritatis ullam rerum consequatur architecto corporis molestiae et odit tempore nam esse aliquid magnam et a dolor et consectetur cumque nemo expedita velit dolorum consectetur iure tenetur doloribus ut ad nisi ad ea atque et molestias est quas ut fuga temporibus non quidem veniam sequi aut et facilis occaecati deleniti itaque provident dolores voluptatem incidunt sequi aspernatur ad dolor ratione ratione dolorem tempore magnam quam est autem magnam autem voluptate voluptatem consequatur aut rerum voluptas illum optio ipsam pariatur voluptatem saepe dolores voluptas atque explicabo labore aut non et architecto maiores architecto in voluptatem ut facere temporibus facilis cum facere est temporibus ea et omnis nisi voluptas nobis et consequatur est qui voluptatem et odio est eum quia eum sit repudiandae amet labore reiciendis earum tempore quisquam a et deserunt sed consequuntur numquam voluptatem similique quia omnis nesciunt quis sunt sed qui atque doloribus aut saepe nihil voluptatibus voluptatem vel soluta et amet inventore laboriosam magni quaerat iure quibusdam nihil laudantium optio numquam earum dolorum amet repellat expedita exercitationem fuga error est debitis voluptatibus qui ratione error vero maxime et cupiditate sed excepturi quasi eaque at magni ipsam aut error similique sit aut magni non enim laborum ea sed dolorum voluptate velit vel iusto quis sit earum nostrum minima consectetur aliquid aut fugiat eligendi quae maiores eius eum repellendus et deserunt molestias consequatur eos est non ad totam repudiandae maiores atque consequatur dignissimos culpa ullam minima cum assumenda odio expedita molestiae veniam exercitationem vero quia voluptatum eos exercitationem hic officia recusandae adipisci aspernatur doloremque iure et quasi quas consectetur neque totam qui id omnis fugiat vel quam voluptatibus nam praesentium qui at laudantium minus nam voluptas vero iste rerum mollitia necessitatibus officia est facilis blanditiis rerum nobis est nemo dolorem voluptatibus excepturi quia laudantium ab repellat labore fugit accusantium illum voluptas eligendi voluptatem totam dolor placeat qui dolor ullam velit natus et consequatur vel tempora doloribus optio voluptate et in et ipsam placeat iste officiis voluptatem minima quia voluptatem incidunt et culpa est reiciendis placeat ut veniam quas impedit dolorem vel sunt ullam ad ut nobis quas voluptatem rerum perferendis qui nihil quisquam quasi quisquam error ut et veniam exercitationem fugit odio minus pariatur odio qui aut dicta necessitatibus excepturi veniam illum molestias id rerum reprehenderit delectus consectetur autem doloremque eum tenetur nemo dignissimos beatae aut nam et officia delectus ullam eligendi labore nihil dolor necessitatibus nostrum vero repellat odit corporis ut sunt iure et sed vel et voluptatum ad ratione explicabo non cum sed amet odio vel quis sed molestiae voluptatem eaque quo dicta autem consequatur cumque et maxime ea aut totam fugiat aliquid nihil et ut sed ad omnis atque autem temporibus est odit rerum quia repellat nesciunt et quo enim illum aspernatur tempore consequatur eos a quaerat accusamus ut dolorem et non itaque laboriosam facere et inventore culpa aliquid sit doloremque rerum distinctio aliquam ipsa et voluptatem sed quos quis ipsam error non quisquam consequatur voluptas reprehenderit qui beatae officia odio dolore qui sint nesciunt magni facilis nostrum reprehenderit ipsa voluptatem cupiditate nemo perspiciatis dolor recusandae cum rerum mollitia necessitatibus perferendis voluptatem velit itaque quis corrupti eius rem modi unde enim et quae alias dolorem est excepturi hic reprehenderit dolor numquam molestiae ut cum ipsum amet ut pariatur natus qui adipisci voluptatibus iusto dolor modi officiis corporis quia voluptatem laudantium voluptates voluptas sit hic quas ipsam dolor deleniti aut est ducimus enim laborum blanditiis totam ad quidem et ea similique amet maiores aliquam dolore corrupti modi eligendi fugit qui animi sunt beatae labore eius alias sed facere dolorem cupiditate beatae vitae doloremque aliquid animi fuga quam quia tenetur consequuntur atque dolorem qui architecto.						</section>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- async assets-->
+<script src="assets/js/vendor/loadjs.min.js"></script>
+<script>
+	var html = document.getElementsByTagName('html')[0];
+	// ----------- CSS
+	// md icons
+	loadjs('assets/css/materialdesignicons.min.css', {
+        preload: true
+	});
+    // UIkit
+        loadjs('node_modules/uikit/dist/css/uikit.min.css', {
+        preload: true
+    });
+    	// themes
+	loadjs('assets/css/themes/themes_combined.min.css', {
+        preload: true
+    });
+	// mdi icons (base64) & google fonts (base64)
+	loadjs([
+	    'assets/css/fonts/mdi_fonts.css',
+        'assets/css/fonts/roboto_base64.css',
+        'assets/css/fonts/sourceCodePro_base64.css'
+    ], {
+        preload: true
+    });
+	// main stylesheet
+        loadjs('assets/css/main.min.css', function() {});
+    	// vendor
+	loadjs('assets/js/vendor.min.js', function () {
+        // scutum common functions/helpers
+        loadjs('assets/js/scutum_common.min.js', function() {
+            scutum.init();
+            loadjs('assets/js/views/forms/forms-wizard.min.js', { success: function() { $(function(){scutum.forms.wizard.init()}); } })
+            // show page
+            setTimeout(function () {
+                // clear styles (FOUC)
+                $(html).css({
+                    'backgroundColor': '',
+                });
+                $('body').css({
+                    'visibility': '',
+                    'overflow': '',
+                    'apacity': '',
+                    'maxHeight': ''
+                });
+            }, 100);
+            // style switcher
+            loadjs([
+                'assets/js/style_switcher.min.js',
+                'assets/css/plugins/style_switcher.min.css'
+            ], {
+                success: function() {
+                    $(function(){
+                        scutum.styleSwitcher();
+                    });
+                }
+            });
+        });
+	});
+</script>
+
+<div id="sc-style-switcher">
+	<a href="#" class="sc-sSw-toggle"><i class="mdi mdi-tune"></i></a>
+	<p class="sc-text-semibold uk-margin-top-remove uk-margin-bottom">Themes</p>
+	<ul class="sc-sSw-theme-switcher">
+		<li class="active">
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-default" data-theme="">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-a" data-theme="sc-theme-a">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-b" data-theme="sc-theme-b">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-c" data-theme="sc-theme-c">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-d" data-theme="sc-theme-d">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-e" data-theme="sc-theme-e">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-f" data-theme="sc-theme-f">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-g" data-theme="sc-theme-g">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-h" data-theme="sc-theme-h">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+        <li>
+            <a href="#" class="sc-sSw-theme-switch sc-sW-theme-dark" data-theme="sc-theme-dark">
+                <span class="sc-sSw-theme-switch-color-1"></span>
+                <span class="sc-sSw-theme-switch-color-2"></span>
+            </a>
+        </li>
+	</ul>
+	<p class="sc-text-semibold uk-margin-large-top uk-margin-bottom">Main Menu</p>
+	<div class="uk-flex uk-flex-middle uk-margin-small-bottom">
+		<input type="checkbox" id="sc-menu-scroll-to-active" data-sc-icheck><label for="sc-menu-scroll-to-active">Scroll to active</label>
+	</div>
+    <div class="uk-flex uk-flex-middle">
+        <input type="checkbox" id="sc-menu-accordion-mode" data-sc-icheck><label for="sc-menu-accordion-mode">Accordion mode</label>
+    </div>
+</div>
+
+</body>
+
+<!-- Mirrored from scutum-html.tzdthemes.com/forms_wizard-vertical.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Feb 2021 07:23:46 GMT -->
+</html>

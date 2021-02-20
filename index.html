@@ -1,0 +1,1700 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from scutum-html.tzdthemes.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Feb 2021 07:22:06 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Scutum Admin Template</title>
+    <meta name="description" content="Scutum Admin Template" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav/favicon-16x16.png">
+	<link rel="mask-icon" href="assets/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#00838f">
+
+
+	<!-- polyfills -->
+	<script src="assets/js/vendor/polyfills.min.js"></script>
+
+	<!-- UIKit js -->
+    <script src="assets/js/uikit.min.js"></script>
+</head>
+<body>
+<script>
+	// prevent FOUC
+	var html = document.getElementsByTagName('html')[0];
+	html.style.backgroundColor = '#f5f5f5';
+	document.body.style.visibility = 'hidden';
+	document.body.style.overflow = 'hidden';
+	document.body.style.apacity = '0';
+	document.body.style.maxHeight = "100%";
+</script>
+<header id="sc-header">
+	<nav class="uk-navbar uk-navbar-container" data-uk-navbar="mode: click; duration: 360">
+		<div class="uk-navbar-left nav-overlay-small uk-margin-right uk-navbar-aside">
+            			<a href="#" id="sc-sidebar-main-toggle"><i class="mdi mdi-backburger sc-menu-close"></i><i class="mdi mdi-menu sc-menu-open"></i></a>
+            			<div class="sc-brand uk-visible@s">
+				<a href="dashboard-v1.html"><img src="assets/img/logo.png" alt=""></a>
+			</div>
+		</div>
+    		<div class="uk-navbar-left nav-overlay uk-margin-right uk-visible@m">
+			<ul class="uk-navbar-nav">
+				<li>
+					<a href="javascript:void(0)" class="md-color-white sc-padding-remove-left"><i class="mdi mdi-view-grid"></i></a>
+					<div class="uk-navbar-dropdown sc-padding-medium">
+						<div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid uk-grid-small" data-uk-grid>
+							<div>
+								<a href="pages-mailbox.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-email-outline sc-icon-32 sc-text-lh-1 md-color-green-700"></i>
+									<span class="uk-text-medium sc-color-primary">Mailbox</span>
+								</a>
+							</div>
+							<div>
+								<a href="pages-poi_listing.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-map-marker sc-icon-32 sc-text-lh-1 md-color-red-700"></i>
+									<span class="uk-text-medium sc-color-primary">POI</span>
+								</a>
+							</div>
+							<div>
+								<a href="pages-chat.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-message-outline sc-icon-32 sc-text-lh-1 md-color-purple-700"></i>
+									<span class="uk-text-medium sc-color-primary">Chat</span>
+								</a>
+							</div>
+							<div>
+								<a href="plugins-calendar.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-calendar sc-icon-32 sc-text-lh-1 md-color-light-blue-700"></i>
+									<span class="uk-text-medium sc-color-primary">Calendar</span>
+								</a>
+							</div>
+							<div>
+								<a href="pages-user_profile.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-account sc-icon-32 sc-text-lh-1 md-color-blue-grey-700"></i>
+									<span class="uk-text-medium sc-color-primary">Profile</span>
+								</a>
+							</div>
+							<div>
+								<a href="plugins-charts.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-chart-multiline sc-icon-32 sc-text-lh-1 md-color-amber-700"></i>
+									<span class="uk-text-medium sc-color-primary">Charts</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+    		<div class="nav-overlay nav-overlay-small uk-navbar-right uk-flex-1" hidden>
+			<a class="uk-navbar-toggle uk-visible@m" data-uk-toggle="target: .nav-overlay; animation: uk-animation-slide-top" href="#">
+				<i class="mdi mdi-close sc-icon-24"></i>
+			</a>
+			<a class="uk-navbar-toggle uk-hidden@m uk-padding-remove-left" data-uk-toggle="target: .nav-overlay-small; animation: uk-animation-slide-top" href="#">
+				<i class="mdi mdi-close sc-icon-24"></i>
+			</a>
+			<div class="uk-navbar-item uk-width-expand uk-padding-remove-right">
+				<form class="uk-search uk-search-navbar uk-width-1-1 uk-flex">
+                    <div class="uk-flex-1 uk-position-relative">
+                        <a class="uk-form-icon uk-form-icon-flip" href="javascript:void(0)" data-uk-icon="icon: close" data-sc-clear-input></a>
+                        <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                    </div>
+					<button class="sc-button sc-button-default sc-button-small sc-button-icon sc-button-flat uk-margin-small-left" type="button"><i class="mdi mdi-magnify sc-icon-24 md-color-white"></i></button>
+				</form>
+			</div>
+		</div>
+		<div class="nav-overlay nav-overlay-small uk-navbar-right">
+			<ul class="uk-navbar-nav">
+				<li>
+					<a class="uk-navbar-toggle uk-visible@m" href="#" data-uk-toggle="target: .nav-overlay; animation: uk-animation-slide-top"><i class="mdi mdi-magnify"></i></a>
+                    <a class="uk-navbar-toggle uk-hidden@m" href="#" id="sc-search-main-toggle-mobile" data-uk-toggle="target: .nav-overlay-small; animation: uk-animation-slide-top"><i class="mdi mdi-magnify"></i></a>
+				</li>
+				<li class="uk-visible@l">
+					<a href="#" id="sc-js-fullscreen-toggle"><i class="mdi mdi-fullscreen sc-js-el-hide"></i><i class="mdi mdi-fullscreen-exit sc-js-el-show"></i></a>
+				</li>
+				<li class="uk-visible@s">
+					<a href="#" class="sc-text-semibold">
+						EN
+					</a>
+					<div class="uk-navbar-dropdown uk-dropdown-small">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a href="#">Deutsch</a></li>
+							<li><a href="#">Español</a></li>
+							<li><a href="#">Français</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="mdi mdi-email"></span>
+					</a>
+					<div class="uk-navbar-dropdown sc-padding-remove">
+						<div class="uk-panel uk-panel-scrollable uk-height-medium">
+							<ul class="uk-list uk-list-divider sc-js-edge-fix">
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<span class="sc-avatar-initials md-color-white md-bg-red-500" title="elvie.jakubowski">MO</span>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">05:13 PM</span>
+										<span class="uk-display-block uk-text-truncate">Expedita aut voluptatem labore explicabo consequatur dignissimos quia enim consequatur.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<img src="assets/img/avatars/avatar_05_sm.png" class="sc-avatar " alt="osbaldo.stracke"/>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<div class="uk-text-small uk-text-muted uk-width-expand">Feb 8, 2021</div>
+										<span class="uk-display-block uk-text-truncate">Est magnam quod et aut amet.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<span class="sc-avatar-initials md-color-white md-bg-light-green-500" title="sgreenholt">KS</span>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">03:13 PM</span>
+										<span class="uk-display-block uk-text-truncate">Libero natus qui nisi quo est enim recusandae sit et reprehenderit ipsum.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<img src="assets/img/avatars/avatar_06_sm.png" class="sc-avatar " alt="wade21"/>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">Feb 7, 2021</span>
+										<span class="uk-display-block uk-text-truncate">Iure aut libero expedita dolorum et rerum molestiae molestiae.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<img src="assets/img/avatars/avatar_02_sm.png" class="sc-avatar " alt="loy.vandervort"/>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">Feb 5, 2021</span>
+										<span class="uk-display-block uk-text-truncate">Et in voluptate vero tempora occaecati atque et autem.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<span class="sc-avatar-initials md-color-white md-bg-purple-500" title="arlene.jerde">FA</span>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">Feb 3, 2021</span>
+										<span class="uk-display-block uk-text-truncate">Ut possimus architecto deleniti eos voluptatibus sed magnam facilis.</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="pages-mailbox.html" class="uk-flex uk-text-small sc-padding-small-ends sc-padding-medium">Show all in mailbox</a>
+					</div>
+				</li>
+				<li class="uk-visible@s">
+					<a href="#">
+						<span class="mdi mdi-bell uk-display-inline-block">
+							<span class="sc-indicator md-bg-color-red-600"></span>
+						</span>
+					</a>
+					<div class="uk-navbar-dropdown md-bg-grey-100">
+                        <div class="sc-padding-medium sc-padding-small-ends">
+                            <div class="uk-text-right uk-margin-medium-bottom">
+                                <button class="sc-button sc-button-default sc-button-outline sc-button-mini sc-js-clear-alerts">Clear all</button>
+                            </div>
+                            <ul class="uk-list uk-margin-remove" id="sc-header-alerts">
+                                <li class="sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-alert-outline md-color-red-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        Information Page Not Found!
+                                    </div>
+                                </li>
+                                <li class="uk-margin-small-top sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-email-check-outline md-color-blue-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        A new password has been sent to your e-mail address.
+                                    </div>
+                                </li>
+                                <li class="uk-margin-small-top sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-alert-outline md-color-red-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        You do not have permission to access the API!
+                                    </div>
+                                </li>
+                                <li class="uk-margin-small-top sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-check-all md-color-light-green-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        Your enquiry has been successfully sent.
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="uk-text-medium uk-text-center sc-js-empty-message sc-text-semibold sc-padding-ends" style="display: none">No alerts!</div>
+                        </div>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="assets/img/avatars/avatar_default_sm.png" alt=""></a>
+					<div class="uk-navbar-dropdown uk-dropdown-small">
+						<ul class="uk-nav uk-nav-navbar">
+							<li><a href="pages-user_profile.html">Profile</a></li>
+							<li><a href="pages-settings.html">Settings</a></li>
+							<li><a href="login_page.html">Log Out</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+            <a href="#" class="sc-js-offcanvas-toggle md-color-white uk-margin-left uk-hidden@l">
+	            <i class="mdi mdi-menu sc-offcanvas-open"></i>
+	            <i class="mdi mdi-arrow-right sc-offcanvas-close"></i>
+            </a>
+		</div>
+	</nav>
+</header>
+
+<aside id="sc-sidebar-main" class="sc-sidebar-info-fixed">
+    <div class="uk-offcanvas-bar">
+	    <div class="sc-sidebar-main-scrollable" data-sc-scrollbar="visible-y">
+	        <ul class="sc-sidebar-menu uk-nav">
+	        
+	            
+	                <li class="sc-sidebar-menu-heading"><span>Applications</span></li>
+	                
+	            	        
+	            	            <li title="Chat">
+	                <a href="pages-chat.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-message-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Chat</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Invoices">
+	                <a href="pages-invoices.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-receipt"></i>
+	                    
+	                    </span><span class="uk-nav-title">Invoices</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Mailbox">
+	                <a href="pages-mailbox.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-email-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Mailbox</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Task Board">
+	                <a href="pages-task_board.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-calendar-text"></i>
+	                    
+	                    </span><span class="uk-nav-title">Task Board</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Notes">
+	                <a href="pages-notes.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-note-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Notes</span>
+	                </a>
+	                	            </li>
+	            	        
+	            
+	                <li class="sc-sidebar-menu-heading"><span>Menu</span></li>
+	                
+	            	        
+	            	            <li title="Dashboards">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-view-dashboard-variant"></i>
+	                    
+	                    </span><span class="uk-nav-title">Dashboards</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li class="sc-page-active">
+	                            
+	                                <a href="dashboard-v1.html">		                                		                                Dashboard 1	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="dashboard-v2.html">		                                		                                Dashboard 2	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Forms">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-format-line-style"></i>
+	                    
+	                    </span><span class="uk-nav-title">Forms</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-regular_elements.html">		                                		                                Regular Elements	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-advanced_elements.html">		                                		                                Advanced Elements	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-dynamic_fields.html">		                                		                                Dynamic Fields	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-validation.html">		                                		                                Validation	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        	                            	                                <li>
+	                                    <a href="#">Form Examples</a>	                                    <ul>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-advertising_evaluation_form.html">		                                            		                                            Advertising Evaluation Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-booking_form.html">		                                            		                                            Booking Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-car_rental_form.html">		                                            		                                            Car Rental Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-checkout_form.html">		                                            		                                            Checkout Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-contact_forms.html">		                                            		                                            Contact Forms	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-job_application_form.html">		                                            		                                            Job Application Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-medical_history_form.html">		                                            		                                            Medical History Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-registration_form.html">		                                            		                                            Registration Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-rental_application_form.html">		                                            		                                            Rental Application Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-transaction_feedback_form.html">		                                            		                                            Transaction Feedback Form	                                            </a>
+	                                        </li>
+	                                    
+	                                    </ul>
+	                                </li>
+	                            
+	                        
+	                        
+	                    	                        	                            	                                <li>
+	                                    <a href="#">Wizard</a>	                                    <ul>
+	                                    	                                        <li>
+	                                            <a href="forms_wizard-horizontal.html">		                                            		                                            Horizontal	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_wizard-horizontal_minimal.html">		                                            		                                            Horizontal Minimal	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_wizard-vertical.html">		                                            		                                            Vertical	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_wizard-vertical_minimal.html">		                                            		                                            Vertical Minimal	                                            </a>
+	                                        </li>
+	                                    
+	                                    </ul>
+	                                </li>
+	                            
+	                        
+	                        
+	                    	                        	                            	                                <li class="sc-sidebar-menu-heading"><span>WYSIWYG Editors</span></li>
+	                                	                                    <li>
+	                                    	                                        <a href="forms_wysiwyg-ckeditor.html">		                                        		                                        CKEditor	                                        </a>
+	                                    	                                    </li>
+	                                	                                    <li>
+	                                    	                                        <a href="forms_wysiwyg-tinymce.html">		                                        		                                        TinyMCE	                                        </a>
+	                                    	                                    </li>
+	                                
+	                            
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Components">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-puzzle"></i>
+	                    
+	                    </span><span class="uk-nav-title">Components</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-accordion.html">		                                		                                Accordion	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-alert.html">		                                		                                Alert	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-animations.html">		                                		                                Animations	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-avatars.html">		                                		                                Avatars	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-badge_label.html">		                                		                                Badge, Label	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-base.html">		                                		                                Base	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-breadcrumb.html">		                                		                                Breadcrumb	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-buttons.html">		                                		                                Buttons	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-fab_buttons.html">		                                		                                FAB Buttons	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-cards.html">		                                		                                Cards	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-color_palette.html">		                                		                                Color Palette	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-drop_dropdowns.html">		                                		                                Drop/Dropdowns	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-filters.html">		                                		                                Filters	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-footer.html">		                                		                                Footer	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-fancy_footer.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Fancy Footer	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-grid.html">		                                		                                Grid	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-icons.html">		                                		                                Icons	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-lists.html">		                                		                                Lists	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-masonry.html">		                                		                                Masonry	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-modals_dialogs.html">		                                		                                Modals/Dialogs	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-notifications.html">		                                		                                Notifications	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-overlay.html">		                                		                                Overlay	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-pagination.html">		                                		                                Pagination	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-progress_spinners.html">		                                		                                Progress/Spinners	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-scrollable.html">		                                		                                Scrollable	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-slider.html">		                                		                                Slider	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-sortable.html">		                                		                                Sortable	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-swiped_list.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Swiped List	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-tables.html">		                                		                                Tables	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-tabs.html">		                                		                                Tabs	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-timeline.html">		                                		                                Timeline	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-toolbar.html">		                                		                                Toolbar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-tooltips.html">		                                		                                Tooltips	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Pages">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-application"></i>
+	                    
+	                    </span><span class="uk-nav-title">Pages</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-blank.html">		                                		                                Blank	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-blank_header_expanded.html">		                                		                                Blank (expanded header)	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-contact_list.html">		                                		                                Contact List	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-contact_list_single.html">		                                		                                Contact List (single)	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-data_visualization.html">		                                		                                Data visualization	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        	                            	                                <li class="sc-sidebar-menu-heading"><span>Error Pages</span></li>
+	                                	                                    <li>
+	                                    	                                        <a href="error_404.html">		                                        		                                        Error 404	                                        </a>
+	                                    	                                    </li>
+	                                	                                    <li>
+	                                    	                                        <a href="error_500.html">		                                        		                                        Error 500	                                        </a>
+	                                    	                                    </li>
+	                                
+	                            
+	                        
+	                        	                            <li class="sc-sidebar-menu-separator"></li>
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-gallery.html">		                                		                                Gallery	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-help_faq.html">		                                		                                Help/Faq	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-invoice_create.html">		                                		                                Invoice (new)	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        	                            	                                <li class="sc-sidebar-menu-heading"><span>Issue Tracker</span></li>
+	                                	                                    <li>
+	                                    	                                        <a href="pages-issues_list.html">		                                        		                                        List View	                                        </a>
+	                                    	                                    </li>
+	                                	                                    <li>
+	                                    	                                        <a href="pages-issue_details.html">		                                        		                                        Issue Details	                                        </a>
+	                                    	                                    </li>
+	                                
+	                            
+	                        
+	                        	                            <li class="sc-sidebar-menu-separator"></li>
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="login_page.html">		                                		                                Login Page	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-poi_listing.html">		                                		                                POI listing	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-pricing_tables.html">		                                		                                Pricing Tables	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-settings.html">		                                		                                Settings	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-user_profile.html">		                                		                                User Profile	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Plugins">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-power-plug"></i>
+	                    
+	                    </span><span class="uk-nav-title">Plugins</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-ajax.html">		                                		                                Ajax	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-calendar.html">		                                		                                Calendar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-calendar_events.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Calendar/Events	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-charts.html">		                                		                                Charts	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-code_editor.html">		                                		                                Code Editor	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-data_grid.html">		                                		                                Data Grid	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-datatables.html">		                                		                                Datatables	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-diff_tool.html">		                                		                                Diff Tool	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-gantt_chart.html">		                                		                                Gantt Chart	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-google_maps.html">		                                		                                Google Maps	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-idle_timeout.html">		                                		                                Idle Timeout	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-image_cropper.html">		                                		                                Image Cropper	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-push_notifications.html">		                                		                                Push Notifications	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-tour.html">		                                		                                Tour	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-tree.html">		                                		                                Tree	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-vector_maps.html">		                                		                                Vector Maps	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Layout">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-view-compact-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Layout</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="layout-top_menu.html">		                                		                                Top Menu	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="layout-mini_sidebar.html">		                                		                                Mini Sidebar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="layout-offcanvas_sidebar.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Offcanvas Sidebar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        	            <li title="Multi-level">
+	                <a href="#">
+	                    <span class="uk-nav-icon"><i class="mdi mdi-format-line-weight"></i></span><span class="uk-nav-title">Multi level</span>
+	                </a>
+	                <ul class="sc-sidebar-menu-sub">
+	                    <li><a href="#">Submenu 1</a></li>
+	                    <li class="sc-js-submenu-trigger sc-has-submenu">
+	                        <a href="#">Submenu 2</a>
+	                        <ul>
+	                            <li><a href="#">Submenu 2.1</a></li>
+	                            <li>
+	                                <a href="#">Submenu 2.2</a>
+	                                <ul>
+	                                    <li><a href="#">Submenu 2.2.1</a></li>
+	                                    <li><a href="#">Submenu 2.2.2</a></li>
+	                                    <li><a href="#">Submenu 2.2.3</a></li>
+	                                </ul>
+	                            </li>
+	                            <li><a href="#">Submenu 2.3</a></li>
+	                            <li><a href="#">Submenu 2.4</a></li>
+	                        </ul>
+	                    </li>
+	                    <li><a href="#">Submenu 3</a></li>
+	                    <li>
+	                        <a href="#">Submenu 4</a>
+	                        <ul>
+	                            <li>
+	                                <a href="#">Submenu 4.1</a>
+	                                <ul>
+	                                    <li><a href="#">Submenu 4.1.1</a></li>
+	                                    <li><a href="#">Submenu 4.1.2</a></li>
+	                                    <li><a href="#">Submenu 4.1.3</a></li>
+	                                </ul>
+	                            </li>
+	                            <li><a href="#">Submenu 4.2</a></li>
+	                            <li><a href="#">Submenu 4.3</a></li>
+	                        </ul>
+	                    </li>
+	                </ul>
+	            </li>
+	        </ul>
+
+	    </div>
+        <div class="sc-sidebar-info">
+            version: 2.5.0
+        </div>
+    </div>
+</aside>
+
+<div id="sc-page-wrapper">
+	<div id="sc-page-content">
+		<div class="uk-child-width-1-5@xl uk-child-width-1-3@l uk-child-width-1-2@s uk-grid-match" data-uk-grid data-uk-sortable>
+			<div>
+				<div class="uk-card sc-widget uk-flex">
+					<div class="uk-width-1-4 md-bg-cyan-600 uk-flex-middle uk-flex uk-flex-center">
+						<i class="mdi mdi-memory md-color-white sc-icon-24"></i>
+					</div>
+					<div class="uk-flex-1">
+						<div class="uk-card-body">
+							<h3 class="uk-card-title">RAM usage</h3>
+							<div class="sc-progress uk-margin-small-top sc-js-ram-usage">
+								<div class="sc-progress-bar md-bg-red-400" style="width: 82%"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card sc-widget uk-flex">
+					<div class="uk-width-1-4 md-bg-red-600 uk-flex-middle uk-flex uk-flex-center">
+						<i class="mdi mdi-account-card-details md-color-white sc-icon-24"></i>
+					</div>
+					<div class="uk-flex-1">
+						<div class="uk-card-body">
+							<h3 class="uk-card-title">New Customers</h3>
+							<p class="uk-text-meta">1 453</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card sc-widget uk-flex">
+					<div class="uk-width-1-4 md-bg-light-green-600 uk-flex-middle uk-flex uk-flex-center">
+						<i class="mdi mdi-car md-color-white  sc-icon-24"></i>
+					</div>
+					<div class="uk-flex-1">
+						<div class="uk-card-body">
+							<h3 class="uk-card-title">Free spaces</h3>
+							<div class="sc-progress uk-margin-small-top">
+								<div class="sc-progress-bar md-bg-light-green-400" style="width: 58%"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card sc-widget uk-flex">
+					<div class="uk-width-1-4 md-bg-amber-600 uk-flex-middle uk-flex uk-flex-center">
+						<i class="mdi mdi-currency-eur md-color-white sc-widget-addon"></i>
+					</div>
+					<div class="uk-flex-1">
+						<div class="uk-card-body">
+							<h3 class="uk-card-title">1.135873</h3>
+							<p class="uk-text-meta">EUR to USD</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card sc-widget uk-flex">
+					<div class="uk-width-1-4 md-bg-purple-600 uk-flex-stretch uk-flex-middle uk-flex uk-flex-center">
+						<i class="mdi mdi-server md-color-white sc-icon-24"></i>
+					</div>
+					<div class="uk-flex-1">
+						<div class="uk-card-body">
+							<h3 class="uk-card-title">99.95%</h3>
+							<p class="uk-text-meta">Server Uptime</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-child-width-1-4@xl uk-child-width-1-2@s sc-sequence-show-manual" data-uk-grid data-sc-sequence-show='{ "target": ".uk-card" }'>
+			<div>
+				<div class="uk-card sc-widget">
+					<div class="sc-widget-content">
+						<div class="uk-flex uk-flex-middle">
+							<div class="uk-flex-1">
+								<h3 class="uk-card-title">New Customers</h3>
+								<p class="uk-text-meta">Jan - Jun 2018</p>
+							</div>
+							<div>
+								<span class="sc-widget-addon md-color-green-600">+20%</span>
+							</div>
+						</div>
+					</div>
+					<div class="sc-chart sc-chart-widget sc-js-chart-widget" data-chart-data="[120, 60, 400, 150, 390, 35]" data-chart-color="#E53935"></div>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card sc-widget">
+					<div class="sc-widget-content">
+						<div class="uk-flex uk-flex-middle">
+							<div class="uk-flex-1">
+								<h3 class="uk-card-title">Comments</h3>
+								<p class="uk-text-meta">Last 7 days</p>
+							</div>
+							<div>
+								<span class="sc-widget-addon md-color-blue-grey-600"><i class="mdi mdi-comment-text-multiple-outline"></i></span>
+							</div>
+						</div>
+					</div>
+					<div class="sc-chart sc-chart-widget sc-js-chart-widget" data-chart-data="[3, 16, 12, 0, 32, 18, 4]" data-chart-x="-,7,d" data-chart-color="#F9A825"></div>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card sc-widget">
+					<div class="sc-widget-content">
+						<div class="uk-flex uk-flex-middle">
+							<div class="uk-flex-1">
+								<h3 class="uk-card-title">Sale</h3>
+								<p class="uk-text-meta">02.2018 - 07.2018</p>
+							</div>
+							<div>
+								<span class="sc-widget-addon md-color-red-600">+ $2230.00</span>
+							</div>
+						</div>
+					</div>
+					<div class="sc-chart sc-chart-widget sc-js-chart-widget" data-chart-data="[12000, 26000, 10000, 15000, 12000, 50000]" data-chart-color="#03A9F4"></div>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card sc-widget">
+					<div class="sc-widget-content">
+						<div class="uk-flex uk-flex-middle">
+							<div class="uk-flex-1">
+								<h3 class="uk-card-title">Orders</h3>
+								<p class="uk-text-meta">02.2018 - 07.2018</p>
+							</div>
+							<div>
+								<span class="sc-widget-addon md-color-blue-grey-600"><i class="mdi mdi-cart"></i></span>
+							</div>
+						</div>
+					</div>
+					<div class="sc-chart sc-chart-widget sc-js-chart-widget" data-chart-data="[120, 40, 210, 360, 510, 242]" data-chart-color="#7CB342"></div>
+				</div>
+			</div>
+		</div>
+		<div data-uk-grid>
+			<div class="uk-width-1-3@l">
+                <div class="uk-child-width-1-1@l uk-child-width-1-2@m uk-child-width-1-2@s" data-uk-grid>
+                    <div>
+                        <div class="uk-card">
+                            <div class="uk-card-header">
+                                <div class="uk-flex uk-flex-middle">
+                                    <div class="uk-flex-1">
+                                        <h3 class="uk-card-title">Traffic sources</h3>
+                                    </div>
+                                    <div class="sc-actions">
+                                        <a href="#" class="sc-actions-icon mdi mdi-close sc-js-card-close"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-card-body" dir="ltr">
+                                <div class="sc-chart uk-flex uk-flex-center sc-js-traffic-sources sc-sequence-show sc-sequence-show-manual" style="animation-delay: 200ms;-webkit-animation-delay: 200ms"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card">
+                            <div class="uk-card-header">
+                                <div class="uk-flex uk-flex-middle">
+                                    <div class="uk-flex-1">
+                                        <h3 class="uk-card-title">Best Sellers</h3>
+                                    </div>
+                                    <div class="sc-actions">
+                                        <a href="#" class="sc-actions-icon mdi mdi-close sc-js-card-close"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-card-body" dir="ltr">
+                                <div class="sc-chart uk-flex uk-flex-center sc-chart-labels sc-js-best-sellers sc-sequence-show sc-sequence-show-manual" style="animation-delay: 400ms;-webkit-animation-delay: 400ms"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			<div class="uk-width-2-3@l">
+				<div class="uk-card uk-margin">
+					<div class="uk-card-header">
+						<div class="uk-flex uk-flex-middle">
+							<div class="uk-flex-1">
+								<h3 class="uk-card-title uk-margin-remove-bottom">Unique visits</h3>
+								<p class="uk-text-meta"><time datetime="2018-01-01">Jan 01, 2018</time> - <time datetime="2018-06-30">Jun 30, 2018</time></p>
+							</div>
+							<div class="sc-actions">
+								<a href="#" class="sc-actions-icon mdi mdi-refresh sc-js-card-reload"></a>
+								<a href="#" class="sc-actions-icon mdi mdi-fullscreen sc-js-card-fullscreen"></a>
+								<a href="#" class="sc-actions-icon mdi mdi-window-minimize sc-js-card-toggle"></a>
+							</div>
+						</div>
+					</div>
+					<div class="sc-card-content">
+						<div>
+							<div id="sc-js-map-visits" class="sc-vmap"></div>
+						</div>
+                        <div class="uk-overflow-auto">
+                            <table class="uk-table uk-table-divider uk-table-striped uk-table-hover uk-table-middle sc-js-map-table uk-margin-remove">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Country</th>
+                                    <th>Jan</th>
+                                    <th>Feb</th>
+                                    <th>Mar</th>
+                                    <th>Apr</th>
+                                    <th>May</th>
+                                    <th>Jun</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr data-region="br">
+                                    <td class="uk-table-shrink sc-padding-left"><span class="flag flag-br"></span></td>
+                                    <td><strong>Brasil</strong></td>
+                                    <td class="uk-text-nowrap">18 141</td>
+                                    <td class="uk-text-nowrap">38 564</td>
+                                    <td class="uk-text-nowrap">8 033</td>
+                                    <td class="uk-text-nowrap">23 659</td>
+                                    <td class="uk-text-nowrap">19 664</td>
+                                    <td class="uk-text-nowrap">13 183</td>
+                                </tr>
+                                <tr data-region="us">
+                                    <td class="uk-table-shrink sc-padding-left"><span class="flag flag-us"></span></td>
+                                    <td><strong>USA</strong></td>
+                                    <td class="uk-text-nowrap">10 392</td>
+                                    <td class="uk-text-nowrap">49 423</td>
+                                    <td class="uk-text-nowrap">32 395</td>
+                                    <td class="uk-text-nowrap">38 692</td>
+                                    <td class="uk-text-nowrap">19 707</td>
+                                    <td class="uk-text-nowrap">10 216</td>
+                                </tr>
+                                <tr data-region="pl">
+                                    <td class="uk-table-shrink sc-padding-left"><span class="flag flag-pl"></span></td>
+                                    <td><strong>Poland</strong></td>
+                                    <td class="uk-text-nowrap">7 932</td>
+                                    <td class="uk-text-nowrap">3 552</td>
+                                    <td class="uk-text-nowrap">5 727</td>
+                                    <td class="uk-text-nowrap">7 853</td>
+                                    <td class="uk-text-nowrap">9 525</td>
+                                    <td class="uk-text-nowrap">5 802</td>
+                                </tr>
+                                <tr data-region="au">
+                                    <td class="uk-table-shrink sc-padding-left"><span class="flag flag-au"></span></td>
+                                    <td><strong>Australia</strong></td>
+                                    <td class="uk-text-nowrap">11 881</td>
+                                    <td class="uk-text-nowrap">28 527</td>
+                                    <td class="uk-text-nowrap">7 109</td>
+                                    <td class="uk-text-nowrap">28 406</td>
+                                    <td class="uk-text-nowrap">21 977</td>
+                                    <td class="uk-text-nowrap">12 457</td>
+                                </tr>
+                                <tr data-region="cn">
+                                    <td class="uk-table-shrink sc-padding-left"><span class="flag flag-cn"></span></td>
+                                    <td><strong>China</strong></td>
+                                    <td class="uk-text-nowrap">18 017</td>
+                                    <td class="uk-text-nowrap">25 640</td>
+                                    <td class="uk-text-nowrap">13 899</td>
+                                    <td class="uk-text-nowrap">92 211</td>
+                                    <td class="uk-text-nowrap">43 132</td>
+                                    <td class="uk-text-nowrap">59 721</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-child-width-1-3@l uk-child-width-1-2@m uk-grid-match" data-uk-grid data-uk-height-match="target: > div > div > .uk-card-header > div">
+			<div>
+				<div class="uk-card">
+					<div class="uk-card-header">
+						<div class="uk-flex uk-flex-middle">
+							<div class="uk-flex-1">
+								<h3 class="uk-card-title">To Do</h3>
+								<p class="uk-text-meta">4/12 tasks</p>
+							</div>
+							<div class="sc-actions">
+								<a href="#" class="sc-actions-icon mdi mdi-window-minimize sc-js-card-toggle"></a>
+								<div class="sc-dropdown sc-dropdown-ico">
+									<a href="#" class="sc-actions-icon mdi mdi-dots-vertical"></a>
+									<div data-uk-dropdown="mode:click">
+										<ul class="uk-nav uk-dropdown-nav">
+											<li class="uk-active"><a href="#">Active</a></li>
+											<li><a href="#">Item</a></li>
+											<li class="uk-nav-header">Header</li>
+											<li><a href="#">Item</a></li>
+											<li><a href="#">Item</a></li>
+											<li class="uk-nav-divider"></li>
+											<li><a href="#">Item</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sc-card-content">
+						<div class="uk-card-body">
+							<ul class="uk-list uk-list-divider sc-js-checklist">
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<input type="checkbox" id="todo-item-1" data-sc-icheck>
+									</div>
+									<div class="sc-list-body">
+										<div class="uk-flex uk-flex-middle">
+											<div class="uk-flex-1">
+												<label for="todo-item-1">Pay electricity bill <span>$248.00 (25/11/2018)</span></label>
+											</div>
+											<span class="uk-label md-bg-grey-600 uk-margin-small-left sc-flex-no-shrink">Other</span>
+										</div>
+									</div>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<input type="checkbox" id="todo-item-2" data-sc-icheck>
+									</div>
+									<div class="sc-list-body">
+										<div class="uk-flex uk-flex-middle">
+											<div class="uk-flex uk-flex-middle uk-flex-1 uk-text-truncate">
+												<i class="mdi mdi-airplane sc-icon-24 uk-margin-small-right"></i>
+												<label for="todo-item-2">Book flight to Dublin</label>
+											</div>
+											<span class="uk-label md-bg-green-400 uk-margin-small-left sc-flex-no-shrink">Family</span>
+										</div>
+									</div>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<input type="checkbox" id="todo-item-3" data-sc-icheck>
+									</div>
+									<div class="sc-list-body">
+										<div class="uk-flex uk-flex-middle">
+											<div class="uk-flex-1 uk-text-truncate">
+												<label for="todo-item-3">Call <strong>Itzel Lynch</strong><span>Short descriprtion&hellip;</span></label>
+											</div>
+											<span class="uk-label md-bg-blue-400 uk-margin-small-left sc-flex-no-shrink">Work</span>
+										</div>
+									</div>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<input type="checkbox" id="todo-item-4" data-sc-icheck checked>
+									</div>
+									<div class="sc-list-body">
+										<div class="uk-flex uk-flex-middle">
+											<div class="uk-flex-1 uk-text-truncate">
+												<label for="todo-item-4">Contact service center <span>15/09/2018</span></label>
+											</div>
+											<span class="uk-label md-bg-red-400 uk-margin-small-left sc-flex-no-shrink">Important</span>
+										</div>
+									</div>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<input type="checkbox" id="todo-item-5" data-sc-icheck>
+									</div>
+									<div class="sc-list-body">
+										<div class="uk-flex uk-flex-middle">
+											<div class="uk-flex-1 uk-text-truncate">
+												<label for="todo-item-5">Email team for updates <span>BCC: <a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="9ff2feedeeeaf6ecfaa6afdff4eaf1fbfab1fcf0f2">[email&#160;protected]</a></span></label>
+											</div>
+											<span class="uk-badge md-bg-blue-400 uk-margin-small-left sc-flex-no-shrink">Work</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div>
+                <div class="uk-card">
+                    <div class="uk-card-header">
+                        <div class="uk-flex uk-flex-middle">
+                            <h3 class="uk-card-title">Email Marketing</h3>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+                        <div>
+                            <h5 class="uk-margin-bottom">Delivered</h5>
+                            <div class="sc-progress uk-margin-medium-top sc-progress-small">
+                                <span class="sc-progress-label uk-text-center">100%</span>
+                                <div class="sc-progress-bar md-bg-light-green-800" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <h5 class="uk-margin-bottom">Opened</h5>
+                            <div class="sc-progress uk-margin-medium-top sc-progress-small">
+                                <span class="sc-progress-label"><span class="uk-text-center uk-display-inline-block" style="width: 64%">64%</span></span>
+                                <div class="sc-progress-bar md-bg-amber-800" style="width: 64%"></div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <h5 class="uk-margin-bottom">Clicked</h5>
+                            <div class="sc-progress uk-margin-medium-top sc-progress-small">
+                                <span class="sc-progress-label"><span class="uk-text-center uk-display-inline-block" style="width: 37%">37%</span></span>
+                                <div class="sc-progress-bar md-bg-red-800" style="width: 37%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div>
+				<div class="uk-card">
+					<div class="uk-card-header">
+						<div class="uk-flex uk-flex-middle">
+							<div class="uk-flex-1">
+								<h3 class="uk-card-title">Shop Orders</h3>
+							</div>
+							<div class="sc-actions">
+								<div class="sc-dropdown">
+									<a href="#" class="sc-actions-icon mdi mdi-dots-vertical"></a>
+									<div data-uk-dropdown="mode:click">
+										<ul class="uk-nav uk-dropdown-nav">
+											<li class="uk-active"><a href="#">Active</a></li>
+											<li><a href="#">Item</a></li>
+											<li class="uk-nav-header">Header</li>
+											<li><a href="#">Item</a></li>
+											<li><a href="#">Item</a></li>
+											<li class="uk-nav-divider"></li>
+											<li><a href="#">Item</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="uk-card-body">
+                        <div class="uk-child-width-1-3@s uk-grid-divider uk-grid-small" data-uk-grid>
+                            <div class="uk-text-center">
+                                <span class="uk-text-medium md-color-blue-600">Today</span>
+                                <h4 class="uk-margin-mini-top">62</h4>
+                            </div>
+                            <div class="uk-text-center">
+                                <span class="sc-color-secondary uk-text-medium">Last Week</span>
+                                <h4 class="uk-margin-mini-top">482</h4>
+                            </div>
+                            <div class="uk-text-center">
+                                <span class="sc-color-secondary uk-text-medium">Last Month</span>
+                                <h4 class="uk-margin-mini-top">1709</h4>
+                            </div>
+                        </div>
+						<hr>
+						<div>
+							<span class="sc-color-secondary uk-text-medium">Orders Summary</span>
+							<div class="sc-progress sc-progress-group uk-margin-medium-top">
+								<div class="sc-progress-bar md-bg-light-green-600 uk-text-center" style="width:65%">Completed</div>
+								<div class="sc-progress-bar md-bg-grey-600 uk-text-center" style="width:20%">Pending</div>
+								<div class="sc-progress-bar md-bg-red-600 uk-text-center" style="width:15%">Closed</div>
+							</div>
+						</div>
+						<hr>
+						<div>
+							<span class="sc-color-secondary uk-text-medium">Quick Info</span>
+							<p class="uk-margin-remove-bottom uk-margin-small-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, tenetur...</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- async assets-->
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/vendor/loadjs.min.js"></script>
+<script>
+	var html = document.getElementsByTagName('html')[0];
+	// ----------- CSS
+	// md icons
+	loadjs('assets/css/materialdesignicons.min.css', {
+        preload: true
+	});
+    // UIkit
+        loadjs('node_modules/uikit/dist/css/uikit.min.css', {
+        preload: true
+    });
+    	// themes
+	loadjs('assets/css/themes/themes_combined.min.css', {
+        preload: true
+    });
+	// mdi icons (base64) & google fonts (base64)
+	loadjs([
+	    'assets/css/fonts/mdi_fonts.css',
+        'assets/css/fonts/roboto_base64.css',
+        'assets/css/fonts/sourceCodePro_base64.css'
+    ], {
+        preload: true
+    });
+	// main stylesheet
+        loadjs('assets/css/main.min.css', function() {});
+    	// vendor
+	loadjs('assets/js/vendor.min.js', function () {
+        // scutum common functions/helpers
+        loadjs('assets/js/scutum_common.min.js', function() {
+            scutum.init();
+            loadjs('assets/js/views/dashboard/dashboard_v1.min.js', { success: function() { $(function(){scutum.dashboard.init()}); } })
+            // show page
+            setTimeout(function () {
+                // clear styles (FOUC)
+                $(html).css({
+                    'backgroundColor': '',
+                });
+                $('body').css({
+                    'visibility': '',
+                    'overflow': '',
+                    'apacity': '',
+                    'maxHeight': ''
+                });
+            }, 100);
+            // style switcher
+            loadjs([
+                'assets/js/style_switcher.min.js',
+                'assets/css/plugins/style_switcher.min.css'
+            ], {
+                success: function() {
+                    $(function(){
+                        scutum.styleSwitcher();
+                    });
+                }
+            });
+        });
+	});
+</script>
+
+<div id="sc-style-switcher">
+	<a href="#" class="sc-sSw-toggle"><i class="mdi mdi-tune"></i></a>
+	<p class="sc-text-semibold uk-margin-top-remove uk-margin-bottom">Themes</p>
+	<ul class="sc-sSw-theme-switcher">
+		<li class="active">
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-default" data-theme="">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-a" data-theme="sc-theme-a">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-b" data-theme="sc-theme-b">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-c" data-theme="sc-theme-c">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-d" data-theme="sc-theme-d">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-e" data-theme="sc-theme-e">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-f" data-theme="sc-theme-f">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-g" data-theme="sc-theme-g">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-h" data-theme="sc-theme-h">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+        <li>
+            <a href="#" class="sc-sSw-theme-switch sc-sW-theme-dark" data-theme="sc-theme-dark">
+                <span class="sc-sSw-theme-switch-color-1"></span>
+                <span class="sc-sSw-theme-switch-color-2"></span>
+            </a>
+        </li>
+	</ul>
+	<p class="sc-text-semibold uk-margin-large-top uk-margin-bottom">Main Menu</p>
+	<div class="uk-flex uk-flex-middle uk-margin-small-bottom">
+		<input type="checkbox" id="sc-menu-scroll-to-active" data-sc-icheck><label for="sc-menu-scroll-to-active">Scroll to active</label>
+	</div>
+    <div class="uk-flex uk-flex-middle">
+        <input type="checkbox" id="sc-menu-accordion-mode" data-sc-icheck><label for="sc-menu-accordion-mode">Accordion mode</label>
+    </div>
+</div>
+
+</body>
+
+<!-- Mirrored from scutum-html.tzdthemes.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Feb 2021 07:23:17 GMT -->
+</html>

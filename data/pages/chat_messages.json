@@ -1,0 +1,61 @@
+[
+	{
+		"id": 1,
+		"own": true,
+		"messages": [
+			{
+				"content": "Ei tota maluisset ius. Sea ne partiendo assentior adolescens. Iisque accusam ex vel, mea ferri lorem menandri eu",
+				"time": "10:21"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"user": {
+			"name": "Mark",
+			"avatar": ""
+		},
+		"messages": [
+			{
+				"content": "Aliquid deserunt excepturi fugiat fugit incidunt neque officiis quae quidem sapiente",
+				"time": "10:23"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"user": {
+			"name": "Lisa",
+			"avatar": ""
+		},
+		"messages": [
+			{
+				"content": "Splendide forensibus ut ius. Solum nominavi adipiscing eam et, ius falli phaedrum ut. Has mandamus salutandi scriptorem ne. Usu et illum quaerendum mediocritatem",
+				"time": "10:26"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"own": true,
+		"messages": [
+			{
+				"content": "Primis gubergren ex mel, te aperiam suscipit efficiantur mel",
+				"time": "10:34"
+			}
+		]
+	},
+	{
+		"id": 4,
+		"user": {
+			"name": "",
+			"avatar": "assets/img/avatars/avatar_05_sm.png"
+		},
+		"messages": [
+			{
+				"content": "His persius assentior intellegebat ea. Modo quaeque ad vim. Ut has nostro recusabo. Nihil mandamus adversarium cum eu, an his assum virtute, vix an vide altera adolescens. Delectus volutpat assentior ne quo, cum an aliquam iracundia. Mei ei nobis molestiae, an doctus debitis interesset sea. Est ut enim dolor, vidisse propriae vis no",
+				"time": "10:48"
+			}
+		]
+	}
+]

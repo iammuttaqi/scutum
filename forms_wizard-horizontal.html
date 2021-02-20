@@ -1,0 +1,1870 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from scutum-html.tzdthemes.com/forms_wizard-horizontal.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Feb 2021 07:23:43 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Scutum Admin Template</title>
+    <meta name="description" content="Scutum Admin Template" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav/favicon-16x16.png">
+	<link rel="mask-icon" href="assets/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#00838f">
+
+
+	<!-- polyfills -->
+	<script src="assets/js/vendor/polyfills.min.js"></script>
+
+	<!-- UIKit js -->
+    <script src="assets/js/uikit.min.js"></script>
+</head>
+<body>
+<script>
+	// prevent FOUC
+	var html = document.getElementsByTagName('html')[0];
+	html.style.backgroundColor = '#f5f5f5';
+	document.body.style.visibility = 'hidden';
+	document.body.style.overflow = 'hidden';
+	document.body.style.apacity = '0';
+	document.body.style.maxHeight = "100%";
+</script>
+<header id="sc-header">
+	<nav class="uk-navbar uk-navbar-container" data-uk-navbar="mode: click; duration: 360">
+		<div class="uk-navbar-left nav-overlay-small uk-margin-right uk-navbar-aside">
+            			<a href="#" id="sc-sidebar-main-toggle"><i class="mdi mdi-backburger sc-menu-close"></i><i class="mdi mdi-menu sc-menu-open"></i></a>
+            			<div class="sc-brand uk-visible@s">
+				<a href="dashboard-v1.html"><img src="assets/img/logo.png" alt=""></a>
+			</div>
+		</div>
+    		<div class="uk-navbar-left nav-overlay uk-margin-right uk-visible@m">
+			<ul class="uk-navbar-nav">
+				<li>
+					<a href="javascript:void(0)" class="md-color-white sc-padding-remove-left"><i class="mdi mdi-view-grid"></i></a>
+					<div class="uk-navbar-dropdown sc-padding-medium">
+						<div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid uk-grid-small" data-uk-grid>
+							<div>
+								<a href="pages-mailbox.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-email-outline sc-icon-32 sc-text-lh-1 md-color-green-700"></i>
+									<span class="uk-text-medium sc-color-primary">Mailbox</span>
+								</a>
+							</div>
+							<div>
+								<a href="pages-poi_listing.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-map-marker sc-icon-32 sc-text-lh-1 md-color-red-700"></i>
+									<span class="uk-text-medium sc-color-primary">POI</span>
+								</a>
+							</div>
+							<div>
+								<a href="pages-chat.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-message-outline sc-icon-32 sc-text-lh-1 md-color-purple-700"></i>
+									<span class="uk-text-medium sc-color-primary">Chat</span>
+								</a>
+							</div>
+							<div>
+								<a href="plugins-calendar.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-calendar sc-icon-32 sc-text-lh-1 md-color-light-blue-700"></i>
+									<span class="uk-text-medium sc-color-primary">Calendar</span>
+								</a>
+							</div>
+							<div>
+								<a href="pages-user_profile.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-account sc-icon-32 sc-text-lh-1 md-color-blue-grey-700"></i>
+									<span class="uk-text-medium sc-color-primary">Profile</span>
+								</a>
+							</div>
+							<div>
+								<a href="plugins-charts.html" class="uk-flex uk-flex-column uk-flex-middle uk-box-shadow-hover-small sc-round sc-padding-small">
+									<i class="mdi mdi-chart-multiline sc-icon-32 sc-text-lh-1 md-color-amber-700"></i>
+									<span class="uk-text-medium sc-color-primary">Charts</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+    		<div class="nav-overlay nav-overlay-small uk-navbar-right uk-flex-1" hidden>
+			<a class="uk-navbar-toggle uk-visible@m" data-uk-toggle="target: .nav-overlay; animation: uk-animation-slide-top" href="#">
+				<i class="mdi mdi-close sc-icon-24"></i>
+			</a>
+			<a class="uk-navbar-toggle uk-hidden@m uk-padding-remove-left" data-uk-toggle="target: .nav-overlay-small; animation: uk-animation-slide-top" href="#">
+				<i class="mdi mdi-close sc-icon-24"></i>
+			</a>
+			<div class="uk-navbar-item uk-width-expand uk-padding-remove-right">
+				<form class="uk-search uk-search-navbar uk-width-1-1 uk-flex">
+                    <div class="uk-flex-1 uk-position-relative">
+                        <a class="uk-form-icon uk-form-icon-flip" href="javascript:void(0)" data-uk-icon="icon: close" data-sc-clear-input></a>
+                        <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                    </div>
+					<button class="sc-button sc-button-default sc-button-small sc-button-icon sc-button-flat uk-margin-small-left" type="button"><i class="mdi mdi-magnify sc-icon-24 md-color-white"></i></button>
+				</form>
+			</div>
+		</div>
+		<div class="nav-overlay nav-overlay-small uk-navbar-right">
+			<ul class="uk-navbar-nav">
+				<li>
+					<a class="uk-navbar-toggle uk-visible@m" href="#" data-uk-toggle="target: .nav-overlay; animation: uk-animation-slide-top"><i class="mdi mdi-magnify"></i></a>
+                    <a class="uk-navbar-toggle uk-hidden@m" href="#" id="sc-search-main-toggle-mobile" data-uk-toggle="target: .nav-overlay-small; animation: uk-animation-slide-top"><i class="mdi mdi-magnify"></i></a>
+				</li>
+				<li class="uk-visible@l">
+					<a href="#" id="sc-js-fullscreen-toggle"><i class="mdi mdi-fullscreen sc-js-el-hide"></i><i class="mdi mdi-fullscreen-exit sc-js-el-show"></i></a>
+				</li>
+				<li class="uk-visible@s">
+					<a href="#" class="sc-text-semibold">
+						EN
+					</a>
+					<div class="uk-navbar-dropdown uk-dropdown-small">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a href="#">Deutsch</a></li>
+							<li><a href="#">Español</a></li>
+							<li><a href="#">Français</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<span class="mdi mdi-email"></span>
+					</a>
+					<div class="uk-navbar-dropdown sc-padding-remove">
+						<div class="uk-panel uk-panel-scrollable uk-height-medium">
+							<ul class="uk-list uk-list-divider sc-js-edge-fix">
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<span class="sc-avatar-initials md-color-white md-bg-red-500" title="jennifer.mayer">MO</span>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">05:13 PM</span>
+										<span class="uk-display-block uk-text-truncate">Non nemo sit delectus tenetur atque ut ipsa et quae voluptatem.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<img src="assets/img/avatars/avatar_05_sm.png" class="sc-avatar " alt="hazel.roob"/>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<div class="uk-text-small uk-text-muted uk-width-expand">Feb 8, 2021</div>
+										<span class="uk-display-block uk-text-truncate">Excepturi voluptatum id iure voluptatem asperiores porro.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<span class="sc-avatar-initials md-color-white md-bg-light-green-500" title="christelle33">KS</span>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">03:13 PM</span>
+										<span class="uk-display-block uk-text-truncate">Porro officia pariatur consectetur doloremque nam voluptas cupiditate nihil.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<img src="assets/img/avatars/avatar_06_sm.png" class="sc-avatar " alt="george71"/>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">Feb 7, 2021</span>
+										<span class="uk-display-block uk-text-truncate">Minus numquam architecto rerum excepturi doloremque.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<img src="assets/img/avatars/avatar_02_sm.png" class="sc-avatar " alt="dboyle"/>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">Feb 5, 2021</span>
+										<span class="uk-display-block uk-text-truncate">Soluta et dolores sit molestiae.</span>
+									</a>
+								</li>
+								<li class="sc-list-group">
+									<div class="sc-list-addon">
+										<span class="sc-avatar-initials md-color-white md-bg-purple-500" title="anais.grady">FA</span>
+									</div>
+									<a href="#" class="sc-list-body uk-display-block">
+										<span class="uk-text-small uk-text-muted uk-width-expand">Feb 3, 2021</span>
+										<span class="uk-display-block uk-text-truncate">Corporis tempora fuga deserunt quis iste placeat sequi ut.</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="pages-mailbox.html" class="uk-flex uk-text-small sc-padding-small-ends sc-padding-medium">Show all in mailbox</a>
+					</div>
+				</li>
+				<li class="uk-visible@s">
+					<a href="#">
+						<span class="mdi mdi-bell uk-display-inline-block">
+							<span class="sc-indicator md-bg-color-red-600"></span>
+						</span>
+					</a>
+					<div class="uk-navbar-dropdown md-bg-grey-100">
+                        <div class="sc-padding-medium sc-padding-small-ends">
+                            <div class="uk-text-right uk-margin-medium-bottom">
+                                <button class="sc-button sc-button-default sc-button-outline sc-button-mini sc-js-clear-alerts">Clear all</button>
+                            </div>
+                            <ul class="uk-list uk-margin-remove" id="sc-header-alerts">
+                                <li class="sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-alert-outline md-color-red-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        Information Page Not Found!
+                                    </div>
+                                </li>
+                                <li class="uk-margin-small-top sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-email-check-outline md-color-blue-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        A new password has been sent to your e-mail address.
+                                    </div>
+                                </li>
+                                <li class="uk-margin-small-top sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-alert-outline md-color-red-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        You do not have permission to access the API!
+                                    </div>
+                                </li>
+                                <li class="uk-margin-small-top sc-border sc-round md-bg-white">
+                                    <div class="uk-margin-right uk-margin-small-left"><i class="mdi mdi-check-all md-color-light-green-600"></i></div>
+                                    <div class="uk-flex-1 uk-text-small">
+                                        Your enquiry has been successfully sent.
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="uk-text-medium uk-text-center sc-js-empty-message sc-text-semibold sc-padding-ends" style="display: none">No alerts!</div>
+                        </div>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="assets/img/avatars/avatar_default_sm.png" alt=""></a>
+					<div class="uk-navbar-dropdown uk-dropdown-small">
+						<ul class="uk-nav uk-nav-navbar">
+							<li><a href="pages-user_profile.html">Profile</a></li>
+							<li><a href="pages-settings.html">Settings</a></li>
+							<li><a href="login_page.html">Log Out</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+            <a href="#" class="sc-js-offcanvas-toggle md-color-white uk-margin-left uk-hidden@l">
+	            <i class="mdi mdi-menu sc-offcanvas-open"></i>
+	            <i class="mdi mdi-arrow-right sc-offcanvas-close"></i>
+            </a>
+		</div>
+	</nav>
+</header>
+
+<aside id="sc-sidebar-main" class="sc-sidebar-info-fixed">
+    <div class="uk-offcanvas-bar">
+	    <div class="sc-sidebar-main-scrollable" data-sc-scrollbar="visible-y">
+	        <ul class="sc-sidebar-menu uk-nav">
+	        
+	            
+	                <li class="sc-sidebar-menu-heading"><span>Applications</span></li>
+	                
+	            	        
+	            	            <li title="Chat">
+	                <a href="pages-chat.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-message-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Chat</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Invoices">
+	                <a href="pages-invoices.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-receipt"></i>
+	                    
+	                    </span><span class="uk-nav-title">Invoices</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Mailbox">
+	                <a href="pages-mailbox.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-email-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Mailbox</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Task Board">
+	                <a href="pages-task_board.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-calendar-text"></i>
+	                    
+	                    </span><span class="uk-nav-title">Task Board</span>
+	                </a>
+	                	            </li>
+	            	        
+	            	            <li title="Notes">
+	                <a href="pages-notes.html">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-note-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Notes</span>
+	                </a>
+	                	            </li>
+	            	        
+	            
+	                <li class="sc-sidebar-menu-heading"><span>Menu</span></li>
+	                
+	            	        
+	            	            <li title="Dashboards">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-view-dashboard-variant"></i>
+	                    
+	                    </span><span class="uk-nav-title">Dashboards</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="dashboard-v1.html">		                                		                                Dashboard 1	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="dashboard-v2.html">		                                		                                Dashboard 2	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Forms">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-format-line-style"></i>
+	                    
+	                    </span><span class="uk-nav-title">Forms</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-regular_elements.html">		                                		                                Regular Elements	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-advanced_elements.html">		                                		                                Advanced Elements	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-dynamic_fields.html">		                                		                                Dynamic Fields	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="forms-validation.html">		                                		                                Validation	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        	                            	                                <li>
+	                                    <a href="#">Form Examples</a>	                                    <ul>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-advertising_evaluation_form.html">		                                            		                                            Advertising Evaluation Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-booking_form.html">		                                            		                                            Booking Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-car_rental_form.html">		                                            		                                            Car Rental Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-checkout_form.html">		                                            		                                            Checkout Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-contact_forms.html">		                                            		                                            Contact Forms	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-job_application_form.html">		                                            		                                            Job Application Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-medical_history_form.html">		                                            		                                            Medical History Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-registration_form.html">		                                            		                                            Registration Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-rental_application_form.html">		                                            		                                            Rental Application Form	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_examples-transaction_feedback_form.html">		                                            		                                            Transaction Feedback Form	                                            </a>
+	                                        </li>
+	                                    
+	                                    </ul>
+	                                </li>
+	                            
+	                        
+	                        
+	                    	                        	                            	                                <li>
+	                                    <a href="#">Wizard</a>	                                    <ul>
+	                                    	                                        <li class="sc-page-active">
+	                                            <a href="forms_wizard-horizontal.html">		                                            		                                            Horizontal	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_wizard-horizontal_minimal.html">		                                            		                                            Horizontal Minimal	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_wizard-vertical.html">		                                            		                                            Vertical	                                            </a>
+	                                        </li>
+	                                    	                                        <li>
+	                                            <a href="forms_wizard-vertical_minimal.html">		                                            		                                            Vertical Minimal	                                            </a>
+	                                        </li>
+	                                    
+	                                    </ul>
+	                                </li>
+	                            
+	                        
+	                        
+	                    	                        	                            	                                <li class="sc-sidebar-menu-heading"><span>WYSIWYG Editors</span></li>
+	                                	                                    <li>
+	                                    	                                        <a href="forms_wysiwyg-ckeditor.html">		                                        		                                        CKEditor	                                        </a>
+	                                    	                                    </li>
+	                                	                                    <li>
+	                                    	                                        <a href="forms_wysiwyg-tinymce.html">		                                        		                                        TinyMCE	                                        </a>
+	                                    	                                    </li>
+	                                
+	                            
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Components">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-puzzle"></i>
+	                    
+	                    </span><span class="uk-nav-title">Components</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-accordion.html">		                                		                                Accordion	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-alert.html">		                                		                                Alert	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-animations.html">		                                		                                Animations	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-avatars.html">		                                		                                Avatars	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-badge_label.html">		                                		                                Badge, Label	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-base.html">		                                		                                Base	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-breadcrumb.html">		                                		                                Breadcrumb	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-buttons.html">		                                		                                Buttons	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-fab_buttons.html">		                                		                                FAB Buttons	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-cards.html">		                                		                                Cards	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-color_palette.html">		                                		                                Color Palette	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-drop_dropdowns.html">		                                		                                Drop/Dropdowns	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-filters.html">		                                		                                Filters	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-footer.html">		                                		                                Footer	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-fancy_footer.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Fancy Footer	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-grid.html">		                                		                                Grid	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-icons.html">		                                		                                Icons	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-lists.html">		                                		                                Lists	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-masonry.html">		                                		                                Masonry	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-modals_dialogs.html">		                                		                                Modals/Dialogs	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-notifications.html">		                                		                                Notifications	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-overlay.html">		                                		                                Overlay	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-pagination.html">		                                		                                Pagination	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-progress_spinners.html">		                                		                                Progress/Spinners	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-scrollable.html">		                                		                                Scrollable	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-slider.html">		                                		                                Slider	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-sortable.html">		                                		                                Sortable	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-swiped_list.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Swiped List	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-tables.html">		                                		                                Tables	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-tabs.html">		                                		                                Tabs	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-timeline.html">		                                		                                Timeline	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-toolbar.html">		                                		                                Toolbar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="components-tooltips.html">		                                		                                Tooltips	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Pages">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-application"></i>
+	                    
+	                    </span><span class="uk-nav-title">Pages</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-blank.html">		                                		                                Blank	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-blank_header_expanded.html">		                                		                                Blank (expanded header)	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-contact_list.html">		                                		                                Contact List	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-contact_list_single.html">		                                		                                Contact List (single)	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-data_visualization.html">		                                		                                Data visualization	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        	                            	                                <li class="sc-sidebar-menu-heading"><span>Error Pages</span></li>
+	                                	                                    <li>
+	                                    	                                        <a href="error_404.html">		                                        		                                        Error 404	                                        </a>
+	                                    	                                    </li>
+	                                	                                    <li>
+	                                    	                                        <a href="error_500.html">		                                        		                                        Error 500	                                        </a>
+	                                    	                                    </li>
+	                                
+	                            
+	                        
+	                        	                            <li class="sc-sidebar-menu-separator"></li>
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-gallery.html">		                                		                                Gallery	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-help_faq.html">		                                		                                Help/Faq	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-invoice_create.html">		                                		                                Invoice (new)	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        	                            	                                <li class="sc-sidebar-menu-heading"><span>Issue Tracker</span></li>
+	                                	                                    <li>
+	                                    	                                        <a href="pages-issues_list.html">		                                        		                                        List View	                                        </a>
+	                                    	                                    </li>
+	                                	                                    <li>
+	                                    	                                        <a href="pages-issue_details.html">		                                        		                                        Issue Details	                                        </a>
+	                                    	                                    </li>
+	                                
+	                            
+	                        
+	                        	                            <li class="sc-sidebar-menu-separator"></li>
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="login_page.html">		                                		                                Login Page	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-poi_listing.html">		                                		                                POI listing	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-pricing_tables.html">		                                		                                Pricing Tables	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-settings.html">		                                		                                Settings	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="pages-user_profile.html">		                                		                                User Profile	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Plugins">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-power-plug"></i>
+	                    
+	                    </span><span class="uk-nav-title">Plugins</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-ajax.html">		                                		                                Ajax	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-calendar.html">		                                		                                Calendar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-calendar_events.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Calendar/Events	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-charts.html">		                                		                                Charts	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-code_editor.html">		                                		                                Code Editor	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-data_grid.html">		                                		                                Data Grid	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-datatables.html">		                                		                                Datatables	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-diff_tool.html">		                                		                                Diff Tool	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-gantt_chart.html">		                                		                                Gantt Chart	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-google_maps.html">		                                		                                Google Maps	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-idle_timeout.html">		                                		                                Idle Timeout	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-image_cropper.html">		                                		                                Image Cropper	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-push_notifications.html">		                                		                                Push Notifications	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-tour.html">		                                		                                Tour	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-tree.html">		                                		                                Tree	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="plugins-vector_maps.html">		                                		                                Vector Maps	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        
+	            	            <li title="Layout">
+	                <a href="#">
+	                    	                        <span class="uk-nav-icon"><i class="mdi mdi-view-compact-outline"></i>
+	                    
+	                    </span><span class="uk-nav-title">Layout</span>
+	                </a>
+	                
+	                    <ul class="sc-sidebar-menu-sub">
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="layout-top_menu.html">		                                		                                Top Menu	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="layout-mini_sidebar.html">		                                		                                Mini Sidebar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    	                        
+	                        <li>
+	                            
+	                                <a href="layout-offcanvas_sidebar.html">		                                			                                <span class="uk-label">new</span>
+		                                		                                Offcanvas Sidebar	                                </a>
+	                            
+	                        </li>
+	                        
+	                        
+	                    
+	                    </ul>
+	                	            </li>
+	            	        	            <li title="Multi-level">
+	                <a href="#">
+	                    <span class="uk-nav-icon"><i class="mdi mdi-format-line-weight"></i></span><span class="uk-nav-title">Multi level</span>
+	                </a>
+	                <ul class="sc-sidebar-menu-sub">
+	                    <li><a href="#">Submenu 1</a></li>
+	                    <li class="sc-js-submenu-trigger sc-has-submenu">
+	                        <a href="#">Submenu 2</a>
+	                        <ul>
+	                            <li><a href="#">Submenu 2.1</a></li>
+	                            <li>
+	                                <a href="#">Submenu 2.2</a>
+	                                <ul>
+	                                    <li><a href="#">Submenu 2.2.1</a></li>
+	                                    <li><a href="#">Submenu 2.2.2</a></li>
+	                                    <li><a href="#">Submenu 2.2.3</a></li>
+	                                </ul>
+	                            </li>
+	                            <li><a href="#">Submenu 2.3</a></li>
+	                            <li><a href="#">Submenu 2.4</a></li>
+	                        </ul>
+	                    </li>
+	                    <li><a href="#">Submenu 3</a></li>
+	                    <li>
+	                        <a href="#">Submenu 4</a>
+	                        <ul>
+	                            <li>
+	                                <a href="#">Submenu 4.1</a>
+	                                <ul>
+	                                    <li><a href="#">Submenu 4.1.1</a></li>
+	                                    <li><a href="#">Submenu 4.1.2</a></li>
+	                                    <li><a href="#">Submenu 4.1.3</a></li>
+	                                </ul>
+	                            </li>
+	                            <li><a href="#">Submenu 4.2</a></li>
+	                            <li><a href="#">Submenu 4.3</a></li>
+	                        </ul>
+	                    </li>
+	                </ul>
+	            </li>
+	        </ul>
+
+	    </div>
+        <div class="sc-sidebar-info">
+            version: 2.5.0
+        </div>
+    </div>
+</aside>
+
+<div id="sc-page-wrapper">
+	<div id="sc-page-content">
+		<div class="uk-flex-center" data-uk-grid>
+			<div class="uk-width-4-5@l">
+				<div class="uk-card uk-card-body">
+					<form action="#" id="sc-wizard-h-form">
+						<div id="sc-wizard-h">
+							<h3><span>Billing<span class="sub-text">Enter your billing information.</span></span></h3>
+							<section class="border md-bg-grey-50">
+								<div data-uk-grid>
+									<div class="uk-width-expand@l">
+										<div class="sc-validation-wrapper">
+											<div class="sc-input-match-field">
+												<span class="uk-margin-right uk-text-nowrap">
+													<input type="radio" id="wiz-title-mr" name="wiz-title" value="mr" data-sc-icheck data-parsley-required>
+													<label for="wiz-title-mr">Mr.</label>
+												</span>
+												<span class="uk-text-nowrap">
+													<input type="radio" id="wiz-title-mrs" name="wiz-title" value="mrs" data-sc-icheck data-parsley-required>
+													<label for="wiz-title-mrs">Mrs.</label>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="uk-width-2-5@l uk-width-1-2@s">
+										<label class="uk-form-label" for="wiz-fname">First Name</label>
+										<input class="uk-input" id="wiz-fname" name="wiz-fname" type="text" data-sc-input data-parsley-required>
+									</div>
+									<div class="uk-width-2-5@l uk-width-1-2@s">
+										<label class="uk-form-label" for="wiz-lname">Last Name</label>
+										<input class="uk-input" id="wiz-lname" name="wiz-lname" type="text" data-sc-input data-parsley-required>
+									</div>
+								</div>
+								<div class="uk-child-width-1-2@s uk-margin" data-uk-grid>
+									<div>
+										<label class="uk-form-label" for="wiz-email">Email</label>
+										<input class="uk-input" id="wiz-email" name="wiz-email" type="text" data-inputmask="'alias': 'email'" data-sc-input>
+									</div>
+									<div>
+										<label class="uk-form-label" for="wiz-phone">Phone Number</label>
+										<input class="uk-input" id="wiz-phone" name="wiz-phone" type="text" data-sc-input>
+									</div>
+								</div>
+								<div class="uk-margin" data-uk-grid>
+									<div class="uk-width-expand@s">
+										<label class="uk-form-label" for="wiz-company">Company</label>
+										<input class="uk-input" id="wiz-company" name="wiz-company" type="text" data-sc-input>
+									</div>
+									<div class="uk-width-2-5@s">
+										<label class="uk-form-label" for="wiz-company-id">Company ID</label>
+										<input class="uk-input" id="wiz-company-id" name="wiz-company-id" type="text" data-sc-input>
+									</div>
+								</div>
+								<hr>
+								<div id="sc-js-dynamic-fields-billing-address">
+									<div data-sc-dynamic-fields="billingAddressTemplate"></div>
+									<script id="billingAddressTemplate" type="text/x-handlebars-template">
+										{{#ifCond index '>' 0 }}
+										<hr class="uk-margin">
+										{{/ifCond}}
+										<div class="sc-form-section">
+											<div class="uk-grid-match" data-uk-grid>
+												<div class="uk-width-expand@m">
+													<div class="uk-margin" data-uk-grid>
+														<div class="uk-width-expand@m">
+															<label class="uk-form-label" for="wiz-address-{{ index }}">Billing Addres</label>
+															<input class="uk-input" id="wiz-address-{{ index }}" name="wiz-address-{{ index }}" type="text" data-sc-input>
+														</div>
+														<div class="uk-width-2-5@m">
+															<label class="uk-form-label" for="wiz-address-postal-{{ index }}">Postal/Zip-Code</label>
+															<input class="uk-input" id="wiz-address-postal-{{ index }}" name="wiz-address-postal-{{ index }}" type="text" data-sc-input>
+														</div>
+													</div>
+													<div class="uk-margin-top-remove uk-child-width-1-2@m" data-uk-grid>
+														<div>
+															<label class="uk-form-label" for="wiz-address-city">City</label>
+															<div class="uk-form-controls">
+																<select name="wiz-address-city-{{ index }}" id="wiz-address-city-{{ index }}" class="uk-select" data-sc-select2='{ "placeholder": "Select a city..." }'>
+																	<option value="">Select a city...</option>
+																																			<option value="1">New York</option>
+																																			<option value="2">Los Angeles</option>
+																																			<option value="3">Chicago</option>
+																																			<option value="4">Houston</option>
+																																			<option value="5">Philadelphia</option>
+																																			<option value="6">Phoenix</option>
+																																			<option value="7">San Antonio</option>
+																																			<option value="8">San Diego</option>
+																																			<option value="9">Dallas</option>
+																																			<option value="10">San Jose</option>
+																																			<option value="11">Austin</option>
+																																			<option value="12">Indianapolis</option>
+																																			<option value="13">Jacksonville</option>
+																																			<option value="14">San Francisco</option>
+																																			<option value="15">Columbus</option>
+																																			<option value="16">Charlotte</option>
+																																			<option value="17">Fort Worth</option>
+																																			<option value="18">Detroit</option>
+																																			<option value="19">El Paso</option>
+																																			<option value="20">Memphis</option>
+																																			<option value="21">Seattle</option>
+																																			<option value="22">Denver</option>
+																																			<option value="23">Washington</option>
+																																			<option value="24">Boston</option>
+																																			<option value="25">Nashville-Davidson</option>
+																																			<option value="26">Baltimore</option>
+																																			<option value="27">Oklahoma City</option>
+																																			<option value="28">Louisville/Jefferson County</option>
+																																			<option value="29">Portland</option>
+																																			<option value="30">Las Vegas</option>
+																																			<option value="31">Milwaukee</option>
+																																			<option value="32">Albuquerque</option>
+																																			<option value="33">Tucson</option>
+																																			<option value="34">Fresno</option>
+																																			<option value="35">Sacramento</option>
+																																			<option value="36">Long Beach</option>
+																																			<option value="37">Kansas City</option>
+																																			<option value="38">Mesa</option>
+																																			<option value="39">Virginia Beach</option>
+																																			<option value="40">Atlanta</option>
+																																			<option value="41">Colorado Springs</option>
+																																			<option value="42">Omaha</option>
+																																			<option value="43">Raleigh</option>
+																																			<option value="44">Miami</option>
+																																			<option value="45">Oakland</option>
+																																			<option value="46">Minneapolis</option>
+																																			<option value="47">Tulsa</option>
+																																			<option value="48">Cleveland</option>
+																																			<option value="49">Wichita</option>
+																																			<option value="50">Arlington</option>
+																																			<option value="51">New Orleans</option>
+																																			<option value="52">Bakersfield</option>
+																																			<option value="53">Tampa</option>
+																																			<option value="54">Honolulu</option>
+																																			<option value="55">Aurora</option>
+																																			<option value="56">Anaheim</option>
+																																			<option value="57">Santa Ana</option>
+																																			<option value="58">St. Louis</option>
+																																			<option value="59">Riverside</option>
+																																			<option value="60">Corpus Christi</option>
+																																			<option value="61">Lexington-Fayette</option>
+																																			<option value="62">Pittsburgh</option>
+																																			<option value="63">Anchorage</option>
+																																			<option value="64">Stockton</option>
+																																			<option value="65">Cincinnati</option>
+																																			<option value="66">St. Paul</option>
+																																			<option value="67">Toledo</option>
+																																			<option value="68">Greensboro</option>
+																																			<option value="69">Newark</option>
+																																			<option value="70">Plano</option>
+																																			<option value="71">Henderson</option>
+																																			<option value="72">Lincoln</option>
+																																			<option value="73">Buffalo</option>
+																																			<option value="74">Jersey City</option>
+																																			<option value="75">Chula Vista</option>
+																																			<option value="76">Fort Wayne</option>
+																																			<option value="77">Orlando</option>
+																																			<option value="78">St. Petersburg</option>
+																																			<option value="79">Chandler</option>
+																																			<option value="80">Laredo</option>
+																																			<option value="81">Norfolk</option>
+																																			<option value="82">Durham</option>
+																																			<option value="83">Madison</option>
+																																			<option value="84">Lubbock</option>
+																																			<option value="85">Irvine</option>
+																																			<option value="86">Winston-Salem</option>
+																																			<option value="87">Glendale</option>
+																																			<option value="88">Garland</option>
+																																			<option value="89">Hialeah</option>
+																																			<option value="90">Reno</option>
+																																			<option value="91">Chesapeake</option>
+																																			<option value="92">Gilbert</option>
+																																			<option value="93">Baton Rouge</option>
+																																			<option value="94">Irving</option>
+																																			<option value="95">Scottsdale</option>
+																																			<option value="96">North Las Vegas</option>
+																																			<option value="97">Fremont</option>
+																																			<option value="98">Boise City</option>
+																																			<option value="99">Richmond</option>
+																																			<option value="100">San Bernardino</option>
+																																			<option value="101">Birmingham</option>
+																																			<option value="102">Spokane</option>
+																																			<option value="103">Rochester</option>
+																																			<option value="104">Des Moines</option>
+																																			<option value="105">Modesto</option>
+																																			<option value="106">Fayetteville</option>
+																																			<option value="107">Tacoma</option>
+																																			<option value="108">Oxnard</option>
+																																			<option value="109">Fontana</option>
+																																			<option value="110">Columbus</option>
+																																			<option value="111">Montgomery</option>
+																																			<option value="112">Moreno Valley</option>
+																																			<option value="113">Shreveport</option>
+																																			<option value="114">Aurora</option>
+																																			<option value="115">Yonkers</option>
+																																			<option value="116">Akron</option>
+																																			<option value="117">Huntington Beach</option>
+																																			<option value="118">Little Rock</option>
+																																			<option value="119">Augusta-Richmond County</option>
+																																			<option value="120">Amarillo</option>
+																																			<option value="121">Glendale</option>
+																																			<option value="122">Mobile</option>
+																																			<option value="123">Grand Rapids</option>
+																																			<option value="124">Salt Lake City</option>
+																																			<option value="125">Tallahassee</option>
+																																			<option value="126">Huntsville</option>
+																																			<option value="127">Grand Prairie</option>
+																																			<option value="128">Knoxville</option>
+																																			<option value="129">Worcester</option>
+																																			<option value="130">Newport News</option>
+																																			<option value="131">Brownsville</option>
+																																			<option value="132">Overland Park</option>
+																																			<option value="133">Santa Clarita</option>
+																																			<option value="134">Providence</option>
+																																			<option value="135">Garden Grove</option>
+																																			<option value="136">Chattanooga</option>
+																																			<option value="137">Oceanside</option>
+																																			<option value="138">Jackson</option>
+																																			<option value="139">Fort Lauderdale</option>
+																																			<option value="140">Santa Rosa</option>
+																																			<option value="141">Rancho Cucamonga</option>
+																																			<option value="142">Port St. Lucie</option>
+																																			<option value="143">Tempe</option>
+																																			<option value="144">Ontario</option>
+																																			<option value="145">Vancouver</option>
+																																			<option value="146">Cape Coral</option>
+																																			<option value="147">Sioux Falls</option>
+																																			<option value="148">Springfield</option>
+																																			<option value="149">Peoria</option>
+																																			<option value="150">Pembroke Pines</option>
+																																	</select>
+															</div>
+														</div>
+														<div>
+															<label class="uk-form-label" for="wiz-address-country">Country</label>
+															<div class="uk-form-controls">
+																<select name="wiz-address-country-{{ index }}" id="wiz-address-country-{{ index }}" class="uk-select" data-sc-select2='{"templateResult": "formatCountryResult", "templateSelection": "formatCountrySelection", "placeholder": "Select a country..."}'>
+																	<option value=""></option>
+																																			<option value="AF">Afghanistan</option>
+																																			<option value="AX">Aland Islands</option>
+																																			<option value="AL">Albania</option>
+																																			<option value="DZ">Algeria</option>
+																																			<option value="AS">American Samoa</option>
+																																			<option value="AD">Andorra</option>
+																																			<option value="AO">Angola</option>
+																																			<option value="AI">Anguilla</option>
+																																			<option value="AQ">Antarctica</option>
+																																			<option value="AG">Antigua and Barbuda</option>
+																																			<option value="AR">Argentina</option>
+																																			<option value="AM">Armenia</option>
+																																			<option value="AW">Aruba</option>
+																																			<option value="AU">Australia</option>
+																																			<option value="AT">Austria</option>
+																																			<option value="AZ">Azerbaijan</option>
+																																			<option value="BS">Bahamas</option>
+																																			<option value="BH">Bahrain</option>
+																																			<option value="BD">Bangladesh</option>
+																																			<option value="BB">Barbados</option>
+																																			<option value="BY">Belarus</option>
+																																			<option value="BE">Belgium</option>
+																																			<option value="BZ">Belize</option>
+																																			<option value="BJ">Benin</option>
+																																			<option value="BM">Bermuda</option>
+																																			<option value="BT">Bhutan</option>
+																																			<option value="BO">Bolivia, Plurinational State of</option>
+																																			<option value="BA">Bosnia and Herzegovina</option>
+																																			<option value="BW">Botswana</option>
+																																			<option value="BR">Brazil</option>
+																																			<option value="IO">British Indian Ocean Territory</option>
+																																			<option value="BN">Brunei Darussalam</option>
+																																			<option value="BG">Bulgaria</option>
+																																			<option value="BF">Burkina Faso</option>
+																																			<option value="BI">Burundi</option>
+																																			<option value="KH">Cambodia</option>
+																																			<option value="CM">Cameroon</option>
+																																			<option value="CA">Canada</option>
+																																			<option value="CV">Cape Verde</option>
+																																			<option value="KY">Cayman Islands</option>
+																																			<option value="CF">Central African Republic</option>
+																																			<option value="TD">Chad</option>
+																																			<option value="CL">Chile</option>
+																																			<option value="CN">China</option>
+																																			<option value="CX">Christmas Island</option>
+																																			<option value="CC">Cocos (Keeling) Islands</option>
+																																			<option value="CO">Colombia</option>
+																																			<option value="KM">Comoros</option>
+																																			<option value="CG">Congo</option>
+																																			<option value="CD">Congo, The Democratic Republic of the Congo</option>
+																																			<option value="CK">Cook Islands</option>
+																																			<option value="CR">Costa Rica</option>
+																																			<option value="CI">Cote d'Ivoire</option>
+																																			<option value="HR">Croatia</option>
+																																			<option value="CU">Cuba</option>
+																																			<option value="CY">Cyprus</option>
+																																			<option value="CZ">Czech Republic</option>
+																																			<option value="DK">Denmark</option>
+																																			<option value="DJ">Djibouti</option>
+																																			<option value="DM">Dominica</option>
+																																			<option value="DO">Dominican Republic</option>
+																																			<option value="EC">Ecuador</option>
+																																			<option value="EG">Egypt</option>
+																																			<option value="SV">El Salvador</option>
+																																			<option value="GQ">Equatorial Guinea</option>
+																																			<option value="ER">Eritrea</option>
+																																			<option value="EE">Estonia</option>
+																																			<option value="ET">Ethiopia</option>
+																																			<option value="FK">Falkland Islands (Malvinas)</option>
+																																			<option value="FO">Faroe Islands</option>
+																																			<option value="FJ">Fiji</option>
+																																			<option value="FI">Finland</option>
+																																			<option value="FR">France</option>
+																																			<option value="GF">French Guiana</option>
+																																			<option value="PF">French Polynesia</option>
+																																			<option value="GA">Gabon</option>
+																																			<option value="GM">Gambia</option>
+																																			<option value="GE">Georgia</option>
+																																			<option value="DE">Germany</option>
+																																			<option value="GH">Ghana</option>
+																																			<option value="GI">Gibraltar</option>
+																																			<option value="GR">Greece</option>
+																																			<option value="GL">Greenland</option>
+																																			<option value="GD">Grenada</option>
+																																			<option value="GP">Guadeloupe</option>
+																																			<option value="GU">Guam</option>
+																																			<option value="GT">Guatemala</option>
+																																			<option value="GG">Guernsey</option>
+																																			<option value="GN">Guinea</option>
+																																			<option value="GW">Guinea-Bissau</option>
+																																			<option value="GY">Guyana</option>
+																																			<option value="HT">Haiti</option>
+																																			<option value="VA">Holy See (Vatican City State)</option>
+																																			<option value="HN">Honduras</option>
+																																			<option value="HK">Hong Kong</option>
+																																			<option value="HU">Hungary</option>
+																																			<option value="IS">Iceland</option>
+																																			<option value="IN">India</option>
+																																			<option value="ID">Indonesia</option>
+																																			<option value="IR">Iran, Islamic Republic of Persian Gulf</option>
+																																			<option value="IQ">Iraq</option>
+																																			<option value="IE">Ireland</option>
+																																			<option value="IM">Isle of Man</option>
+																																			<option value="IL">Israel</option>
+																																			<option value="IT">Italy</option>
+																																			<option value="JM">Jamaica</option>
+																																			<option value="JP">Japan</option>
+																																			<option value="JE">Jersey</option>
+																																			<option value="JO">Jordan</option>
+																																			<option value="KZ">Kazakhstan</option>
+																																			<option value="KE">Kenya</option>
+																																			<option value="KI">Kiribati</option>
+																																			<option value="KP">Korea, Democratic People's Republic of Korea</option>
+																																			<option value="KR">Korea, Republic of South Korea</option>
+																																			<option value="KW">Kuwait</option>
+																																			<option value="KG">Kyrgyzstan</option>
+																																			<option value="LA">Laos</option>
+																																			<option value="LV">Latvia</option>
+																																			<option value="LB">Lebanon</option>
+																																			<option value="LS">Lesotho</option>
+																																			<option value="LR">Liberia</option>
+																																			<option value="LY">Libyan Arab Jamahiriya</option>
+																																			<option value="LI">Liechtenstein</option>
+																																			<option value="LT">Lithuania</option>
+																																			<option value="LU">Luxembourg</option>
+																																			<option value="MO">Macao</option>
+																																			<option value="MK">Macedonia</option>
+																																			<option value="MG">Madagascar</option>
+																																			<option value="MW">Malawi</option>
+																																			<option value="MY">Malaysia</option>
+																																			<option value="MV">Maldives</option>
+																																			<option value="ML">Mali</option>
+																																			<option value="MT">Malta</option>
+																																			<option value="MH">Marshall Islands</option>
+																																			<option value="MQ">Martinique</option>
+																																			<option value="MR">Mauritania</option>
+																																			<option value="MU">Mauritius</option>
+																																			<option value="YT">Mayotte</option>
+																																			<option value="MX">Mexico</option>
+																																			<option value="FM">Micronesia, Federated States of Micronesia</option>
+																																			<option value="MD">Moldova</option>
+																																			<option value="MC">Monaco</option>
+																																			<option value="MN">Mongolia</option>
+																																			<option value="ME">Montenegro</option>
+																																			<option value="MS">Montserrat</option>
+																																			<option value="MA">Morocco</option>
+																																			<option value="MZ">Mozambique</option>
+																																			<option value="MM">Myanmar</option>
+																																			<option value="NA">Namibia</option>
+																																			<option value="NR">Nauru</option>
+																																			<option value="NP">Nepal</option>
+																																			<option value="NL">Netherlands</option>
+																																			<option value="AN">Netherlands Antilles</option>
+																																			<option value="NC">New Caledonia</option>
+																																			<option value="NZ">New Zealand</option>
+																																			<option value="NI">Nicaragua</option>
+																																			<option value="NE">Niger</option>
+																																			<option value="NG">Nigeria</option>
+																																			<option value="NU">Niue</option>
+																																			<option value="NF">Norfolk Island</option>
+																																			<option value="MP">Northern Mariana Islands</option>
+																																			<option value="NO">Norway</option>
+																																			<option value="OM">Oman</option>
+																																			<option value="PK">Pakistan</option>
+																																			<option value="PW">Palau</option>
+																																			<option value="PS">Palestinian Territory, Occupied</option>
+																																			<option value="PA">Panama</option>
+																																			<option value="PG">Papua New Guinea</option>
+																																			<option value="PY">Paraguay</option>
+																																			<option value="PE">Peru</option>
+																																			<option value="PH">Philippines</option>
+																																			<option value="PN">Pitcairn</option>
+																																			<option value="PL">Poland</option>
+																																			<option value="PT">Portugal</option>
+																																			<option value="PR">Puerto Rico</option>
+																																			<option value="QA">Qatar</option>
+																																			<option value="RO">Romania</option>
+																																			<option value="RU">Russia</option>
+																																			<option value="RW">Rwanda</option>
+																																			<option value="RE">Reunion</option>
+																																			<option value="BL">Saint Barthelemy</option>
+																																			<option value="SH">Saint Helena, Ascension and Tristan Da Cunha</option>
+																																			<option value="KN">Saint Kitts and Nevis</option>
+																																			<option value="LC">Saint Lucia</option>
+																																			<option value="MF">Saint Martin</option>
+																																			<option value="PM">Saint Pierre and Miquelon</option>
+																																			<option value="VC">Saint Vincent and the Grenadines</option>
+																																			<option value="WS">Samoa</option>
+																																			<option value="SM">San Marino</option>
+																																			<option value="ST">Sao Tome and Principe</option>
+																																			<option value="SA">Saudi Arabia</option>
+																																			<option value="SN">Senegal</option>
+																																			<option value="RS">Serbia</option>
+																																			<option value="SC">Seychelles</option>
+																																			<option value="SL">Sierra Leone</option>
+																																			<option value="SG">Singapore</option>
+																																			<option value="SK">Slovakia</option>
+																																			<option value="SI">Slovenia</option>
+																																			<option value="SB">Solomon Islands</option>
+																																			<option value="SO">Somalia</option>
+																																			<option value="ZA">South Africa</option>
+																																			<option value="SS">South Sudan</option>
+																																			<option value="GS">South Georgia and the South Sandwich Islands</option>
+																																			<option value="ES">Spain</option>
+																																			<option value="LK">Sri Lanka</option>
+																																			<option value="SD">Sudan</option>
+																																			<option value="SR">Suriname</option>
+																																			<option value="SJ">Svalbard and Jan Mayen</option>
+																																			<option value="SZ">Swaziland</option>
+																																			<option value="SE">Sweden</option>
+																																			<option value="CH">Switzerland</option>
+																																			<option value="SY">Syrian Arab Republic</option>
+																																			<option value="TW">Taiwan</option>
+																																			<option value="TJ">Tajikistan</option>
+																																			<option value="TZ">Tanzania, United Republic of Tanzania</option>
+																																			<option value="TH">Thailand</option>
+																																			<option value="TL">Timor-Leste</option>
+																																			<option value="TG">Togo</option>
+																																			<option value="TK">Tokelau</option>
+																																			<option value="TO">Tonga</option>
+																																			<option value="TT">Trinidad and Tobago</option>
+																																			<option value="TN">Tunisia</option>
+																																			<option value="TR">Turkey</option>
+																																			<option value="TM">Turkmenistan</option>
+																																			<option value="TC">Turks and Caicos Islands</option>
+																																			<option value="TV">Tuvalu</option>
+																																			<option value="UG">Uganda</option>
+																																			<option value="UA">Ukraine</option>
+																																			<option value="AE">United Arab Emirates</option>
+																																			<option value="GB">United Kingdom</option>
+																																			<option value="US">United States</option>
+																																			<option value="UY">Uruguay</option>
+																																			<option value="UZ">Uzbekistan</option>
+																																			<option value="VU">Vanuatu</option>
+																																			<option value="VE">Venezuela, Bolivarian Republic of Venezuela</option>
+																																			<option value="VN">Vietnam</option>
+																																			<option value="VG">Virgin Islands, British</option>
+																																			<option value="VI">Virgin Islands, U.S.</option>
+																																			<option value="WF">Wallis and Futuna</option>
+																																			<option value="YE">Yemen</option>
+																																			<option value="ZM">Zambia</option>
+																																			<option value="ZW">Zimbabwe</option>
+																																	</select>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="uk-width-auto@m uk-flex-middle">
+													<a href="#" class="sc-js-section-clone sc-color-primary"><i class="mdi mdi-plus-box-outline sc-icon-24 sc-js-el-hide"></i><i class="mdi mdi-minus-box-outline sc-icon-24 sc-js-el-show"></i></a>
+												</div>
+											</div>
+										</div>
+									</script>
+								</div>
+							</section>
+							<h3><i class="mdi mdi-credit-card step-icon"></i><span>Payment<span class="sub-text">Choose your payment method</span></span></h3>
+							<section class="border">
+								<div data-uk-grid>
+									<div class="uk-width-1-4@m">
+										<ul class="uk-list uk-list-condensed">
+											<li>
+												<input type="radio" id="wiz-pay-cc" name="wiz-payment" data-sc-icheck data-payment-info="more-info-cc" value="credit card" checked>
+												<label for="wiz-pay-cc"><img src="assets/icons/payment-icons/color/visa.png" alt="" width="64" height="40" class="uk-margin-mini-right"><img src="assets/icons/payment-icons/color/mastercard.png" alt="" width="64" height="40"></label>
+											</li>
+											<li>
+												<input type="radio" id="wiz-pay-paypal" name="wiz-payment" data-sc-icheck data-payment-info="more-info-paypal" value="paypal">
+												<label for="wiz-pay-paypal"><img src="assets/icons/payment-icons/color/PayPal.png" alt="" width="64" height="40"></label>
+											</li>
+											<li>
+												<input type="radio" id="wiz-pay-amazon" name="wiz-payment" data-sc-icheck data-payment-info="more-info-amazon" value="amazon">
+												<label for="wiz-pay-amazon"><img src="assets/icons/payment-icons/color/Amazon.png" alt="" width="64" height="40"></label>
+											</li>
+											<li>
+												<input type="radio" id="wiz-pay-moneybookers" name="wiz-payment" data-sc-icheck data-payment-info="more-info-moneybookers" value="moneybookers">
+												<label for="wiz-pay-moneybookers"><img src="assets/icons/payment-icons/color/Skrill.png" alt="" width="64" height="40"></label>
+											</li>
+										</ul>
+									</div>
+									<div class="uk-width-3-4@m uk-flex uk-flex-middle">
+										<div id="more-info-cc" class="uk-width-1-1">
+											<div class="uk-margin">
+												<div class="cc-validate-wrapper">
+													<span class="cc-icon"><img src="assets/img/blank.gif" alt="" width="52" height="32"></span>
+													<label class="uk-form-label" for="wiz-pay-cc-number">Credit card number</label>
+													<input class="uk-input" type="text" id="wiz-pay-cc-number" name="wiz-pay-cc-number" data-cc-validate>
+													<div class="uk-form-help-block cc-numbers">Examples: <a href="#">4000 0000 0000 0002</a> | <a href="#">4026 0000 0000 0002</a> | <a href="#">5018 0000 0009</a> | <a href="#">5100 0000 0000 0008</a> | <a href="#">6011 0000 0000 0004</a></div>
+												</div>
+											</div>
+											<div class="uk-margin">
+												<label class="uk-form-label" for="wiz-pay-cc-holder">Credit card holder Name</label>
+												<div class="uk-form-controls">
+													<input class="uk-input" id="wiz-pay-cc-holder" name="wiz-pay-cc-holder" type="text">
+												</div>
+											</div>
+											<div class="uk-child-width-1-2@m uk-child-width-1-4@l" data-uk-grid>
+												<div>
+													<label class="uk-form-label" for="wiz-pay-cc-validation-date">Validation date</label>
+													<div class="uk-form-controls">
+														<input class="uk-input" id="wiz-pay-cc-validation-date" name="wiz-pay-cc-validation-date" type="text" data-inputmask=" 'alias': 'datetime', 'inputFormat': 'mm/yyyy'" placeholder="mm/yyyy" >
+													</div>
+												</div>
+												<div>
+													<label class="uk-form-label" for="wiz-pay-cc-cvv">CVV</label>
+													<div class="uk-form-controls">
+														<input class="uk-input" id="wiz-pay-cc-cvv" name="wiz-pay-cc-cvv" type="text" data-inputmask="'mask': '999'" placeholder="123">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="more-info-paypal" style="display: none" class="uk-width-1-1">
+											<label class="uk-form-label" for="wiz-pay-paypal-name">PayPal Account</label>
+											<input class="uk-input" id="wiz-pay-paypal-name" name="wiz-pay-paypal-name" type="text" data-sc-input="outline">
+										</div>
+										<div style="display: none"  id="more-info-amazon" class="uk-width-1-1">
+											<label class="uk-form-label" for="wiz-pay-amazon-name">Amazon Account</label>
+											<input class="uk-input" id="wiz-pay-amazon-name" name="wiz-pay-amazon-name" type="text" data-sc-input="outline">
+										</div>
+										<div style="display: none"  id="more-info-moneybookers" class="uk-width-1-1">
+											<label class="uk-form-label" for="wiz-pay-moneybookers-name">Skrill Account</label>
+											<input class="uk-input" id="wiz-pay-moneybookers-name" name="wiz-pay-moneybookers-name" type="text" data-sc-input="outline">
+										</div>
+									</div>
+								</div>
+							</section>
+							<h3><i class="ion-md-checkmark step-icon"></i><span>Confirm Order<span class="sub-text">Verify order details</span></span></h3>
+							<section>
+								<h4 class="uk-heading-line"><span>Billing Information</span></h4>
+								<address>
+									Ernest J. Holt<br>
+									3879 College Street<br>
+									Atlanta, GA 30338
+								</address>
+								<h4 class="uk-heading-line uk-margin-medium-top"><span>Payment</span></h4>
+								<div class="uk-grid-small" data-uk-grid>
+									<div class="uk-width-1-5@m uk-text-muted">
+										Mastercard
+									</div>
+									<div class="uk-width-3-5@m">
+										**** **** **** 3157
+									</div>
+								</div>
+								<div class="uk-grid-small" data-uk-grid>
+									<div class="uk-width-1-5@m uk-text-muted">
+										Expires
+									</div>
+									<div class="uk-width-3-5@m">
+										05/2020
+									</div>
+								</div>
+								<div class="uk-grid-small" data-uk-grid>
+									<div class="uk-width-1-5@m uk-text-muted">
+										Card Holder
+									</div>
+									<div class="uk-width-3-5@m">
+										Ernest J. Holt
+									</div>
+								</div>
+								<h4 class="uk-heading-line uk-margin-medium-top"><span>Products</span></h4>
+								<div class="uk-overflow-auto">
+									<table class="uk-table uk-table-striped uk-table-small">
+										<thead>
+										<tr>
+											<th>Product Name</th>
+											<th>Quantity</th>
+											<th>Price</th>
+											<th>Total</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td class="uk-text-nowrap">Lorem ipsum dolor sit amet, consectetur.</td>
+											<td>4</td>
+											<td>$100</td>
+											<td>$400</td>
+										</tr>
+										<tr>
+											<td>Lorem ipsum dolor sit amet, consectetur.</td>
+											<td>4</td>
+											<td>$100</td>
+											<td>$400</td>
+										</tr>
+										<tr>
+											<td>Lorem ipsum dolor sit amet, consectetur.</td>
+											<td>4</td>
+											<td>$100</td>
+											<td>$400</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- async assets-->
+<script src="assets/js/vendor/loadjs.min.js"></script>
+<script>
+	var html = document.getElementsByTagName('html')[0];
+	// ----------- CSS
+	// md icons
+	loadjs('assets/css/materialdesignicons.min.css', {
+        preload: true
+	});
+    // UIkit
+        loadjs('node_modules/uikit/dist/css/uikit.min.css', {
+        preload: true
+    });
+    	// themes
+	loadjs('assets/css/themes/themes_combined.min.css', {
+        preload: true
+    });
+	// mdi icons (base64) & google fonts (base64)
+	loadjs([
+	    'assets/css/fonts/mdi_fonts.css',
+        'assets/css/fonts/roboto_base64.css',
+        'assets/css/fonts/sourceCodePro_base64.css'
+    ], {
+        preload: true
+    });
+	// main stylesheet
+        loadjs('assets/css/main.min.css', function() {});
+    	// vendor
+	loadjs('assets/js/vendor.min.js', function () {
+        // scutum common functions/helpers
+        loadjs('assets/js/scutum_common.min.js', function() {
+            scutum.init();
+            loadjs('assets/js/views/forms/forms-wizard.min.js', { success: function() { $(function(){scutum.forms.wizard.init()}); } })
+            // show page
+            setTimeout(function () {
+                // clear styles (FOUC)
+                $(html).css({
+                    'backgroundColor': '',
+                });
+                $('body').css({
+                    'visibility': '',
+                    'overflow': '',
+                    'apacity': '',
+                    'maxHeight': ''
+                });
+            }, 100);
+            // style switcher
+            loadjs([
+                'assets/js/style_switcher.min.js',
+                'assets/css/plugins/style_switcher.min.css'
+            ], {
+                success: function() {
+                    $(function(){
+                        scutum.styleSwitcher();
+                    });
+                }
+            });
+        });
+	});
+</script>
+
+<div id="sc-style-switcher">
+	<a href="#" class="sc-sSw-toggle"><i class="mdi mdi-tune"></i></a>
+	<p class="sc-text-semibold uk-margin-top-remove uk-margin-bottom">Themes</p>
+	<ul class="sc-sSw-theme-switcher">
+		<li class="active">
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-default" data-theme="">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-a" data-theme="sc-theme-a">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-b" data-theme="sc-theme-b">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-c" data-theme="sc-theme-c">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-d" data-theme="sc-theme-d">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-e" data-theme="sc-theme-e">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-f" data-theme="sc-theme-f">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-g" data-theme="sc-theme-g">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="sc-sSw-theme-switch sc-sW-theme-h" data-theme="sc-theme-h">
+				<span class="sc-sSw-theme-switch-color-1"></span>
+				<span class="sc-sSw-theme-switch-color-2"></span>
+			</a>
+		</li>
+        <li>
+            <a href="#" class="sc-sSw-theme-switch sc-sW-theme-dark" data-theme="sc-theme-dark">
+                <span class="sc-sSw-theme-switch-color-1"></span>
+                <span class="sc-sSw-theme-switch-color-2"></span>
+            </a>
+        </li>
+	</ul>
+	<p class="sc-text-semibold uk-margin-large-top uk-margin-bottom">Main Menu</p>
+	<div class="uk-flex uk-flex-middle uk-margin-small-bottom">
+		<input type="checkbox" id="sc-menu-scroll-to-active" data-sc-icheck><label for="sc-menu-scroll-to-active">Scroll to active</label>
+	</div>
+    <div class="uk-flex uk-flex-middle">
+        <input type="checkbox" id="sc-menu-accordion-mode" data-sc-icheck><label for="sc-menu-accordion-mode">Accordion mode</label>
+    </div>
+</div>
+
+</body>
+
+<!-- Mirrored from scutum-html.tzdthemes.com/forms_wizard-horizontal.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Feb 2021 07:23:44 GMT -->
+</html>

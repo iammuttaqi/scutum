@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" class="sc-login-page">
+
+<!-- Mirrored from scutum-html.tzdthemes.com/login_page.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Feb 2021 07:23:29 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Scutum Admin Template - Login Page</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav/favicon-16x16.png">
+	<link rel="mask-icon" href="assets/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#607D8B">
+
+	<style>
+		.appLoading {background:#bdbdbd}
+		.appLoading body {visibility:hidden;overflow:hidden;max-height: 100%;}
+	</style>
+	<script>
+		var html = document.getElementsByTagName('html')[0];
+		html.className += ' appLoading';
+	</script>
+
+	<!-- UIkit js -->
+	<script src="assets/js/uikit.min.js"></script>
+</head>
+<body>
+
+	<div class="uk-flex uk-flex-center uk-flex-middle sc-login-page-wrapper">
+		<div class="uk-width-2-3@s uk-width-1-2@m uk-width-1-3@l uk-width-1-4@xl">
+			<div class="uk-card">
+				<div class="uk-card-body">
+					<div class="sc-login-page-logo">
+						<img src="assets/img/logo_alt.png" alt="">
+					</div>
+                    <div class="sc-login-page-logo sc-login-page-logo-light">
+                        <img src="assets/img/logo.png" alt="">
+                    </div>
+					<div id="sc-login-form" class="sc-toggle-login-register sc-toggle-login-password">
+						<div class="sc-login-page-inner">
+							<div class="uk-margin-medium">
+								<label for="sc-login-username">Email/Login</label>
+								<input id="sc-login-username" type="text" class="uk-input" data-sc-input>
+							</div>
+							<div class="uk-margin-medium">
+								<label for="sc-login-password">Password</label>
+								<input id="sc-login-password" type="password" class="uk-input" data-sc-input>
+								<div class="uk-margin-small-top uk-text-small uk-text-right@s"><a href="#" class="sc-link" data-uk-toggle="target: .sc-toggle-login-password; animation: uk-animation-scale-up">Forgot Password?</a></div>
+							</div>
+							<div class="uk-margin-large-top">
+								<a href="dashboard-v1.html" class="sc-button sc-button-large sc-button-block sc-button-danger">Sign In</a>
+								<div class="uk-child-width-1-3 uk-grid-medium uk-margin-medium-top" data-uk-grid>
+									<div>
+										<a href="#" class="sc-button sc-button-social sc-button-facebook uk-width-1-1 uk-flex-center"><i class="mdi mdi-facebook"></i></a>
+									</div>
+									<div>
+										<a href="#" class="sc-button sc-button-social sc-button-twitter uk-width-1-1 uk-flex-center"><i class="mdi mdi-twitter"></i></a>
+									</div>
+									<div>
+										<a href="#" class="sc-button sc-button-social sc-button-linkedin uk-width-1-1 uk-flex-center"><i class="mdi mdi-linkedin"></i></a>
+									</div>
+								</div>
+                                <div class="uk-margin-large-top uk-text-center">
+                                    <span class="sc-color-secondary">Don't have an account?</span>
+                                    <div><a href="#" class="sc-text-semibold" data-uk-toggle="target: .sc-toggle-login-register; animation: uk-animation-scale-up">Sign Up</a></div>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div id="sc-register-form" class="sc-toggle-login-register" hidden>
+						<div class="sc-login-page-inner">
+							<div class="uk-margin-medium">
+								<label for="sc-register-username">Name</label>
+								<input id="sc-register-username" type="text" class="uk-input" data-sc-input>
+							</div>
+							<div class="uk-margin-medium">
+								<label for="sc-register-email">Email</label>
+								<input id="sc-register-email" type="text" class="uk-input" data-sc-input>
+							</div>
+							<div class="uk-margin-medium">
+								<label for="sc-register-password">Password</label>
+								<input id="sc-register-password" type="password" class="uk-input" data-sc-input>
+							</div>
+							<div class="uk-margin-large-top">
+								<button class="sc-button sc-button-large sc-button-block sc-button-primary">Sign Up</button>
+								<div class="uk-margin-large-top uk-flex uk-flex-middle uk-flex-center">
+									<a href="#" class="sc-text-semibold" data-uk-toggle="target: .sc-toggle-login-register; animation: uk-animation-scale-up">Back to login form</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="sc-password-form" class="sc-toggle-login-password" hidden>
+						<div class="sc-login-page-inner">
+							<div class="uk-margin-medium">
+								Please enter your email address. You will receive a link to reset your password.
+							</div>
+							<div class="uk-margin-medium">
+								<label for="sc-reset-email">Email</label>
+								<input id="sc-reset-email" type="text" class="uk-input" data-sc-input>
+							</div>
+							<div class="uk-margin-large-top">
+								<button class="sc-button sc-button-large sc-button-block sc-button-primary">Reset Password</button>
+								<div class="uk-margin-large-top uk-flex uk-flex-middle uk-flex-center">
+									<a href="#" class="sc-text-semibold" data-uk-toggle="target: .sc-toggle-login-password; animation: uk-animation-scale-up">Back to login form</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- async assets-->
+<script src="assets/js/vendor/loadjs.min.js"></script>
+<script>
+	var html = document.getElementsByTagName('html')[0];
+	// ----------- CSS
+	loadjs(['node_modules/uikit/dist/css/uikit.min.css', 'assets/css/login_page.min.css'], {
+		success: function () {
+			// add id to main stylesheet
+			var mainCSS = document.querySelectorAll("link[href='assets/css/login_page.min.css']");
+			mainCSS[0].setAttribute('id', 'main-stylesheet');
+			// show page
+			setTimeout(function () {
+				html.className = html.className.replace( /(?:^|\s)appLoading(?!\S)/g , '' );
+			}, 100);
+			// mdi icons CSS
+			loadjs('assets/css/materialdesignicons.min.css', {
+				before: function (path, scriptEl) {
+					if (/(^css!|\.css$)/.test(path)) {
+						document.head.insertBefore(scriptEl, mainCSS[0])
+					}
+					return false;
+				}
+			});
+		},
+		async: false
+	});
+	// mdi icons (base64) & google fonts (base64)
+	loadjs(['assets/css/fonts/mdi_fonts.css', 'assets/css/fonts/roboto_base64.css']);
+	// vendor
+	loadjs('assets/js/vendor.min.js', {
+		success: function () {
+			// scutum common functions/helpers
+			loadjs('assets/js/scutum_common.min.js', {
+				success: function() {
+					scutum.init();
+				}
+			});
+		}
+	});
+</script>
+
+</body>
+
+<!-- Mirrored from scutum-html.tzdthemes.com/login_page.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Feb 2021 07:23:30 GMT -->
+</html>
